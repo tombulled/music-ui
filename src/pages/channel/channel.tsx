@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { CHANNEL } from "../../test-data";
 
 interface Thumbnail {
   height: number
@@ -23,11 +24,12 @@ export const ChannelPage = () => {
 
   const [channel, setChannel] = useState<Channel | null>(null)
 
-  // if (channel === null) {
-  //   fetch(`http://127.0.0.1:8081/channel/${channelId}`)
-  //     .then(response => response.json())
-  //     .then(channel => setChannel(channel))
-  // }
+  if (channel === null) {
+    // fetch(`http://127.0.0.1:8081/channel/${channelId}`)
+    //   .then(response => response.json())
+    //   .then(channel => setChannel(channel))
+    setChannel(CHANNEL)
+  }
 
   if (channel === null) {
     return null

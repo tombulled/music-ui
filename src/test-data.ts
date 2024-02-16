@@ -1,3 +1,31 @@
+export const CHANNEL: any = {
+  "description": "Tracy Chapman is an American singer-songwriter, widely known for her hit singles \"Fast Car\" and \"Give Me One Reason\".\nShe was signed to Elektra Records by Bob Krasnow in 1987. The following year she released her debut album, Tracy Chapman, which became a commercial success, boosted by her appearance at the Nelson Mandela 70th Birthday Tribute concert, and was certified 6× Platinum by the Recording Industry Association of America. The album received six Grammy Award nominations, including one for Album of the Year, three of which she won: Best New Artist, Best Female Pop Vocal Performance for her single \"Fast Car\", and Best Contemporary Folk Album. In 1989 she released her second album, Crossroads, which earned her an additional Grammy Award nomination for Best Contemporary Folk Album. Her third album, Matters of the Heart, followed in 1992.\nHer fourth album, New Beginning, was released in 1995 and became another worldwide success. It was certified 5× platinum by the RIAA and yielded the hit single \"Give Me One Reason\", which earned her the Grammy Award for Best Rock Song. Five years would pass before the release of her fifth album, Telling Stories.\n\nFrom Wikipedia (https://en.wikipedia.org/wiki/Tracy_Chapman) under Creative Commons Attribution CC-BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/legalcode)",
+  "id": "UCndrh03uIKb9SUR7-znGZ9w",
+  "thumbnails": [
+    {
+      "height": 225,
+      "url": "https://lh3.googleusercontent.com/KzA9PHXjq437N0DCbyqLX-BE_e5GRz0l3Xd9RwYq2L-8fFy9buH92JZze5MX-QZ_E1_70iA6WcwdtWw=w540-h225-p-l90-rj",
+      "width": 540
+    },
+    {
+      "height": 340,
+      "url": "https://lh3.googleusercontent.com/KzA9PHXjq437N0DCbyqLX-BE_e5GRz0l3Xd9RwYq2L-8fFy9buH92JZze5MX-QZ_E1_70iA6WcwdtWw=w816-h340-p-l90-rj",
+      "width": 816
+    },
+    {
+      "height": 600,
+      "url": "https://lh3.googleusercontent.com/KzA9PHXjq437N0DCbyqLX-BE_e5GRz0l3Xd9RwYq2L-8fFy9buH92JZze5MX-QZ_E1_70iA6WcwdtWw=w1440-h600-p-l90-rj",
+      "width": 1440
+    },
+    {
+      "height": 762,
+      "url": "https://lh3.googleusercontent.com/KzA9PHXjq437N0DCbyqLX-BE_e5GRz0l3Xd9RwYq2L-8fFy9buH92JZze5MX-QZ_E1_70iA6WcwdtWw=w1829-h762-p-l90-rj",
+      "width": 1829
+    }
+  ],
+  "title": "Tracy Chapman"
+}
+
 export const ALBUMS: any[] = [
   {
     "browse_id": "MPREb_th07pqb2TjY",
