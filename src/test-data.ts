@@ -1,32 +1,146 @@
 export const ALBUM_THUMBNAIL: string = "https://lh3.googleusercontent.com/vIFjUF3ke2wAQxDSJ_InRwM3mYfK2YwmhqOb-rM8s37qPAJQuZ5ZFTEAJSvbCrhOXE5Dlq0RyvATB8fa0Q=w544-h544-l90-rj"
 // export const ALBUM_THUMBNAIL: string = "https://i9.ytimg.com/s_p/OLAK5uy_k-nVhxfuIQFO2ZE9EvqPKKM4__S3aOb_Y/maxresdefault.jpg?sqp=CNzeyK4Gir7X7AMICPHGuq4GEAE=&rs=AOn4CLDbTmt9CQb6PwAy_4LyBG43Ci7yBA&v=1708041073"
 
+export const ALBUM: any = {
+  "channel_name": "Amber Run",
+  "id": "OLAK5uy_k-nVhxfuIQFO2ZE9EvqPKKM4__S3aOb_Y",
+  "name": "Philophobia",
+  "songs": [
+    {
+      "album": null,
+      "artist": {
+        "browse_id": "UCV3E_B9ZBCg8x-Zivau5syg",
+        "name": "Amber Run Official"
+      },
+      "id": "CrU4ApD6GHU",
+      "name": "Leader Countdown",
+      "thumbnail": "https://i.ytimg.com/vi/CrU4ApD6GHU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDMXBKM-IzT8MNhP3VXSI9e1RW36w"
+    },
+    {
+      "album": null,
+      "artist": {
+        "browse_id": "UCV3E_B9ZBCg8x-Zivau5syg",
+        "name": "Amber Run Official"
+      },
+      "id": "Q0xRXKiFgcQ",
+      "name": "Neon Circus",
+      "thumbnail": "https://i.ytimg.com/vi/Q0xRXKiFgcQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCowe62TvzKMWiPB2VVGZinLbn-oQ"
+    },
+    {
+      "album": null,
+      "artist": {
+        "browse_id": "UCV3E_B9ZBCg8x-Zivau5syg",
+        "name": "Amber Run Official"
+      },
+      "id": "Mnha8CGLsMU",
+      "name": "No One Gets out Alive",
+      "thumbnail": "https://i.ytimg.com/vi/Mnha8CGLsMU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDjH9WZnFgTJALJAIrNDQlp09N2_g"
+    },
+    {
+      "album": null,
+      "artist": {
+        "browse_id": "UCV3E_B9ZBCg8x-Zivau5syg",
+        "name": "Amber Run Official"
+      },
+      "id": "xikoU3SAbfQ",
+      "name": "What Could Be as Lonely as Love",
+      "thumbnail": "https://i.ytimg.com/vi/xikoU3SAbfQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0ZtW3pBSc_JZ9FyZtKL0kEG2Nrg"
+    },
+    {
+      "album": null,
+      "artist": {
+        "browse_id": "UCV3E_B9ZBCg8x-Zivau5syg",
+        "name": "Amber Run Official"
+      },
+      "id": "Siyqiui7Rs8",
+      "name": "Carousel",
+      "thumbnail": "https://i.ytimg.com/vi/Siyqiui7Rs8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCntCNdv3wU7RuzKDQW73fru9XI_g"
+    },
+    {
+      "album": null,
+      "artist": {
+        "browse_id": "UCV3E_B9ZBCg8x-Zivau5syg",
+        "name": "Amber Run Official"
+      },
+      "id": "4if0JwWCgbk",
+      "name": "Affection",
+      "thumbnail": "https://i.ytimg.com/vi/4if0JwWCgbk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDA0b6zHdZtmXEXZjNFzDoZ1BiaPQ"
+    },
+    {
+      "album": null,
+      "artist": {
+        "browse_id": "UCV3E_B9ZBCg8x-Zivau5syg",
+        "name": "Amber Run Official"
+      },
+      "id": "_NWaQMaLyTg",
+      "name": "Medicine",
+      "thumbnail": "https://i.ytimg.com/vi/_NWaQMaLyTg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBI7lFnIIZLYEI0WkX9AbgcKvYYpA"
+    },
+    {
+      "album": null,
+      "artist": {
+        "browse_id": "UCV3E_B9ZBCg8x-Zivau5syg",
+        "name": "Amber Run Official"
+      },
+      "id": "_kYSj_6KUHM",
+      "name": "I Dare You",
+      "thumbnail": "https://i.ytimg.com/vi/_kYSj_6KUHM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBgeRYaSr3vy5vS8ly6snw_qHQ66g"
+    },
+    {
+      "album": null,
+      "artist": {
+        "browse_id": "UCV3E_B9ZBCg8x-Zivau5syg",
+        "name": "Amber Run Official"
+      },
+      "id": "uTodLRy-4xs",
+      "name": "The Darkness Has a Voice",
+      "thumbnail": "https://i.ytimg.com/vi/uTodLRy-4xs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAHOMKt1PHkqxsUf7ETAreM0JM2Og"
+    },
+    {
+      "album": null,
+      "artist": {
+        "browse_id": "UCV3E_B9ZBCg8x-Zivau5syg",
+        "name": "Amber Run Official"
+      },
+      "id": "5q9AybWL8PE",
+      "name": "Entertainment",
+      "thumbnail": "https://i.ytimg.com/vi/5q9AybWL8PE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqpxjKVLEd2p7c133IDRtp9lNTGA"
+    },
+    {
+      "album": null,
+      "artist": {
+        "browse_id": "UCV3E_B9ZBCg8x-Zivau5syg",
+        "name": "Amber Run Official"
+      },
+      "id": "QmjwGu9kKZo",
+      "name": "Worship",
+      "thumbnail": "https://i.ytimg.com/vi/QmjwGu9kKZo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-q2AJ6IVPQvl9Ko3LRQbryVtXng"
+    }
+  ],
+  "thumbnail": "https://i9.ytimg.com/s_p/OLAK5uy_k-nVhxfuIQFO2ZE9EvqPKKM4__S3aOb_Y/maxresdefault.jpg?sqp=CJyEya4Gir7X7AMICPHGuq4GEAE=&rs=AOn4CLD-vM4Ih36bTgphInAWL1GmGZEylA&v=1708041073"
+}
+
 export const CHANNEL: any = {
-  "description": "Tracy Chapman is an American singer-songwriter, widely known for her hit singles \"Fast Car\" and \"Give Me One Reason\".\nShe was signed to Elektra Records by Bob Krasnow in 1987. The following year she released her debut album, Tracy Chapman, which became a commercial success, boosted by her appearance at the Nelson Mandela 70th Birthday Tribute concert, and was certified 6× Platinum by the Recording Industry Association of America. The album received six Grammy Award nominations, including one for Album of the Year, three of which she won: Best New Artist, Best Female Pop Vocal Performance for her single \"Fast Car\", and Best Contemporary Folk Album. In 1989 she released her second album, Crossroads, which earned her an additional Grammy Award nomination for Best Contemporary Folk Album. Her third album, Matters of the Heart, followed in 1992.\nHer fourth album, New Beginning, was released in 1995 and became another worldwide success. It was certified 5× platinum by the RIAA and yielded the hit single \"Give Me One Reason\", which earned her the Grammy Award for Best Rock Song. Five years would pass before the release of her fifth album, Telling Stories.\n\nFrom Wikipedia (https://en.wikipedia.org/wiki/Tracy_Chapman) under Creative Commons Attribution CC-BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/legalcode)",
-  "id": "UCndrh03uIKb9SUR7-znGZ9w",
+  "description": "Amber Run are a British indie rock band from Nottingham, composed of Joshua \"Joe\" Keogh, Tom Sperring, and Henry Wyeth. The band have released three full-length albums, three mini-albums, and five EPs. Initially called Amber, they later changed their name to avoid conflict with the German dance-pop singer of same name.\n\nFrom Wikipedia (https://en.wikipedia.org/wiki/Amber_Run) under Creative Commons Attribution CC-BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/legalcode)",
+  "id": "UCMO-CgAtd1jI2m2CrXcP2sQ",
   "thumbnails": [
     {
       "height": 225,
-      "url": "https://lh3.googleusercontent.com/KzA9PHXjq437N0DCbyqLX-BE_e5GRz0l3Xd9RwYq2L-8fFy9buH92JZze5MX-QZ_E1_70iA6WcwdtWw=w540-h225-p-l90-rj",
+      "url": "https://lh3.googleusercontent.com/riJWYfHTbHzi3UxA0wV6b6BYSoZIVVub81mZVWGQ4Y5cPbvfdoVHt0FacN4lQg5MWXScsTFbmPHMHw=w540-h225-p-l90-rj",
       "width": 540
     },
     {
       "height": 340,
-      "url": "https://lh3.googleusercontent.com/KzA9PHXjq437N0DCbyqLX-BE_e5GRz0l3Xd9RwYq2L-8fFy9buH92JZze5MX-QZ_E1_70iA6WcwdtWw=w816-h340-p-l90-rj",
+      "url": "https://lh3.googleusercontent.com/riJWYfHTbHzi3UxA0wV6b6BYSoZIVVub81mZVWGQ4Y5cPbvfdoVHt0FacN4lQg5MWXScsTFbmPHMHw=w816-h340-p-l90-rj",
       "width": 816
     },
     {
-      "height": 600,
-      "url": "https://lh3.googleusercontent.com/KzA9PHXjq437N0DCbyqLX-BE_e5GRz0l3Xd9RwYq2L-8fFy9buH92JZze5MX-QZ_E1_70iA6WcwdtWw=w1440-h600-p-l90-rj",
-      "width": 1440
-    },
-    {
-      "height": 762,
-      "url": "https://lh3.googleusercontent.com/KzA9PHXjq437N0DCbyqLX-BE_e5GRz0l3Xd9RwYq2L-8fFy9buH92JZze5MX-QZ_E1_70iA6WcwdtWw=w1829-h762-p-l90-rj",
-      "width": 1829
+      "height": 450,
+      "url": "https://lh3.googleusercontent.com/riJWYfHTbHzi3UxA0wV6b6BYSoZIVVub81mZVWGQ4Y5cPbvfdoVHt0FacN4lQg5MWXScsTFbmPHMHw=w1080-h450-p-l90-rj",
+      "width": 1080
     }
   ],
-  "title": "Tracy Chapman"
+  "title": "Amber Run"
 }
 
 export const ALBUMS: any[] = [
