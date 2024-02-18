@@ -2,25 +2,25 @@ import { Box, Button, TextField, Typography } from "@mui/material"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export const ChannelIdForm = () => {
+export const GoToAlbum = () => {
   const navigate = useNavigate()
   
-  const [channelId, setChannelId] = useState<string>("")
+  const [albumId, setAlbumId] = useState<string>("")
 
   const onSubmit = () => {
-    navigate(`/channel/${channelId}`)
+    navigate(`/album/${albumId}`)
   }
 
   return (
     <Box>
       <Typography>
-        Go to Channel
+        Go to Album
       </Typography>
 
       <TextField
-        label="Channel ID"
+        label="Album ID"
         variant="outlined"
-        onChange={event => setChannelId(event.target.value)}
+        onChange={event => setAlbumId(event.target.value)}
       />
 
       <Button onClick={onSubmit}>Submit</Button>
@@ -28,4 +28,4 @@ export const ChannelIdForm = () => {
   )
 }
 
-export default ChannelIdForm
+export default GoToAlbum
