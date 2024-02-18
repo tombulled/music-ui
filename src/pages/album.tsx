@@ -41,9 +41,6 @@ export const AlbumPage = () => {
     //   .then(response => response.json())
     //   .then(album => setAlbum(album))
     setAlbum(ALBUM)
-  }
-
-  if (album === null) {
     return null
   }
 
