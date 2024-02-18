@@ -1,6 +1,327 @@
 export const ALBUM_THUMBNAIL: string = "https://lh3.googleusercontent.com/vIFjUF3ke2wAQxDSJ_InRwM3mYfK2YwmhqOb-rM8s37qPAJQuZ5ZFTEAJSvbCrhOXE5Dlq0RyvATB8fa0Q=w544-h544-l90-rj"
 // export const ALBUM_THUMBNAIL: string = "https://i9.ytimg.com/s_p/OLAK5uy_k-nVhxfuIQFO2ZE9EvqPKKM4__S3aOb_Y/maxresdefault.jpg?sqp=CNzeyK4Gir7X7AMICPHGuq4GEAE=&rs=AOn4CLDbTmt9CQb6PwAy_4LyBG43Ci7yBA&v=1708041073"
 
+export const PLAYLIST: any = {
+  "id": "OLAK5uy_k-nVhxfuIQFO2ZE9EvqPKKM4__S3aOb_Y",
+  "thumbnails": [
+    {
+      "height": 180,
+      "url": "https://i9.ytimg.com/s_p/OLAK5uy_k-nVhxfuIQFO2ZE9EvqPKKM4__S3aOb_Y/mqdefault.jpg?sqp=CJCFyq4Gir7X7AMICPHGuq4GEAE=&rs=AOn4CLAzVspK092Z--MxRP-h-mmvuxfKxg&v=1708041073&days_since_epoch=19771",
+      "width": 180
+    },
+    {
+      "height": 640,
+      "url": "https://i9.ytimg.com/s_p/OLAK5uy_k-nVhxfuIQFO2ZE9EvqPKKM4__S3aOb_Y/sddefault.jpg?sqp=CJCFyq4Gir7X7AMICPHGuq4GEAE=&rs=AOn4CLCWIDe85BFB_60KbF5ik5cTB_pW1g&v=1708041073&days_since_epoch=19771",
+      "width": 640
+    },
+    {
+      "height": 1200,
+      "url": "https://i9.ytimg.com/s_p/OLAK5uy_k-nVhxfuIQFO2ZE9EvqPKKM4__S3aOb_Y/maxresdefault.jpg?sqp=CJCFyq4Gir7X7AMICPHGuq4GEAE=&rs=AOn4CLCVuI7MfRgtT2CgO6gRR5Y7e--29Q&v=1708041073&days_since_epoch=19771",
+      "width": 1200
+    }
+  ],
+  "title": "Album - Philophobia",
+  "videos": [
+    {
+      "duration": 43,
+      "id": "CrU4ApD6GHU",
+      "thumbnails": [
+        {
+          "height": 94,
+          "url": "https://i.ytimg.com/vi/CrU4ApD6GHU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCJo6iqUePLeU2DCxT1C8uibKKdOg",
+          "width": 168
+        },
+        {
+          "height": 110,
+          "url": "https://i.ytimg.com/vi/CrU4ApD6GHU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCD1tk9ofPgys2vR9x2X6jduH7R9A",
+          "width": 196
+        },
+        {
+          "height": 138,
+          "url": "https://i.ytimg.com/vi/CrU4ApD6GHU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLABQN66Tdqo8EXdwff_i80v8cvccw",
+          "width": 246
+        },
+        {
+          "height": 188,
+          "url": "https://i.ytimg.com/vi/CrU4ApD6GHU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDMXBKM-IzT8MNhP3VXSI9e1RW36w",
+          "width": 336
+        }
+      ],
+      "title": "Leader Countdown"
+    },
+    {
+      "duration": 217,
+      "id": "Q0xRXKiFgcQ",
+      "thumbnails": [
+        {
+          "height": 94,
+          "url": "https://i.ytimg.com/vi/Q0xRXKiFgcQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD5SMoJ6rRDOOCLRt99vqriM1JKJw",
+          "width": 168
+        },
+        {
+          "height": 110,
+          "url": "https://i.ytimg.com/vi/Q0xRXKiFgcQ/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCB8CuYg2OoxwnGXOtLeL6pEyLa_w",
+          "width": 196
+        },
+        {
+          "height": 138,
+          "url": "https://i.ytimg.com/vi/Q0xRXKiFgcQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCFvVW2JntSgjPsNUQAHpn9pN1MgQ",
+          "width": 246
+        },
+        {
+          "height": 188,
+          "url": "https://i.ytimg.com/vi/Q0xRXKiFgcQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCowe62TvzKMWiPB2VVGZinLbn-oQ",
+          "width": 336
+        }
+      ],
+      "title": "Neon Circus"
+    },
+    {
+      "duration": 218,
+      "id": "Mnha8CGLsMU",
+      "thumbnails": [
+        {
+          "height": 94,
+          "url": "https://i.ytimg.com/vi/Mnha8CGLsMU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDWab7mwDA0vLmzjAp2EDSGrkjaEA",
+          "width": 168
+        },
+        {
+          "height": 110,
+          "url": "https://i.ytimg.com/vi/Mnha8CGLsMU/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBx90lLlXvnwnIA-dWCPj6q4Nui9Q",
+          "width": 196
+        },
+        {
+          "height": 138,
+          "url": "https://i.ytimg.com/vi/Mnha8CGLsMU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDUgyhom_FTUUPzV7NOFqls11yekQ",
+          "width": 246
+        },
+        {
+          "height": 188,
+          "url": "https://i.ytimg.com/vi/Mnha8CGLsMU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDjH9WZnFgTJALJAIrNDQlp09N2_g",
+          "width": 336
+        }
+      ],
+      "title": "No One Gets out Alive"
+    },
+    {
+      "duration": 237,
+      "id": "xikoU3SAbfQ",
+      "thumbnails": [
+        {
+          "height": 94,
+          "url": "https://i.ytimg.com/vi/xikoU3SAbfQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD9F7BjtN9r6iwVZJznEJuuZYjqFw",
+          "width": 168
+        },
+        {
+          "height": 110,
+          "url": "https://i.ytimg.com/vi/xikoU3SAbfQ/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBDsYprMfHRGe1TyzjkugWT3YNu7g",
+          "width": 196
+        },
+        {
+          "height": 138,
+          "url": "https://i.ytimg.com/vi/xikoU3SAbfQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBIGXxDgj5n_-L2HX4LfYcy5g3F0A",
+          "width": 246
+        },
+        {
+          "height": 188,
+          "url": "https://i.ytimg.com/vi/xikoU3SAbfQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0ZtW3pBSc_JZ9FyZtKL0kEG2Nrg",
+          "width": 336
+        }
+      ],
+      "title": "What Could Be as Lonely as Love"
+    },
+    {
+      "duration": 172,
+      "id": "Siyqiui7Rs8",
+      "thumbnails": [
+        {
+          "height": 94,
+          "url": "https://i.ytimg.com/vi/Siyqiui7Rs8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAwlaVyC76bCGJJURu6CNieVVnG-g",
+          "width": 168
+        },
+        {
+          "height": 110,
+          "url": "https://i.ytimg.com/vi/Siyqiui7Rs8/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDqwmSpz-I12bjV7FmLxdVlOM-5kA",
+          "width": 196
+        },
+        {
+          "height": 138,
+          "url": "https://i.ytimg.com/vi/Siyqiui7Rs8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAowcbsVmcas4zJNLubW4atNo66FA",
+          "width": 246
+        },
+        {
+          "height": 188,
+          "url": "https://i.ytimg.com/vi/Siyqiui7Rs8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCntCNdv3wU7RuzKDQW73fru9XI_g",
+          "width": 336
+        }
+      ],
+      "title": "Carousel"
+    },
+    {
+      "duration": 272,
+      "id": "4if0JwWCgbk",
+      "thumbnails": [
+        {
+          "height": 94,
+          "url": "https://i.ytimg.com/vi/4if0JwWCgbk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDnVpEXIF8z4GmsQkRbv-2Ip5BFUg",
+          "width": 168
+        },
+        {
+          "height": 110,
+          "url": "https://i.ytimg.com/vi/4if0JwWCgbk/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCQYLFoR2AkBwCKUKP0ARvJTKRRpA",
+          "width": 196
+        },
+        {
+          "height": 138,
+          "url": "https://i.ytimg.com/vi/4if0JwWCgbk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAIa0BdNQv6tMj47cNDMVrqV7tYuQ",
+          "width": 246
+        },
+        {
+          "height": 188,
+          "url": "https://i.ytimg.com/vi/4if0JwWCgbk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDA0b6zHdZtmXEXZjNFzDoZ1BiaPQ",
+          "width": 336
+        }
+      ],
+      "title": "Affection"
+    },
+    {
+      "duration": 270,
+      "id": "_NWaQMaLyTg",
+      "thumbnails": [
+        {
+          "height": 94,
+          "url": "https://i.ytimg.com/vi/_NWaQMaLyTg/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB3ZlpP3qWgZZV0e0zrLlP-W_4B7g",
+          "width": 168
+        },
+        {
+          "height": 110,
+          "url": "https://i.ytimg.com/vi/_NWaQMaLyTg/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC5qMD7WCPVJNkJ_qkITgyBUdz2fQ",
+          "width": 196
+        },
+        {
+          "height": 138,
+          "url": "https://i.ytimg.com/vi/_NWaQMaLyTg/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDQCsyVX3dOr7hIC-axRoCwzmW1BQ",
+          "width": 246
+        },
+        {
+          "height": 188,
+          "url": "https://i.ytimg.com/vi/_NWaQMaLyTg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBI7lFnIIZLYEI0WkX9AbgcKvYYpA",
+          "width": 336
+        }
+      ],
+      "title": "Medicine"
+    },
+    {
+      "duration": 278,
+      "id": "_kYSj_6KUHM",
+      "thumbnails": [
+        {
+          "height": 94,
+          "url": "https://i.ytimg.com/vi/_kYSj_6KUHM/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAvgveHH568Ehu_rKmefLtQse7sSg",
+          "width": 168
+        },
+        {
+          "height": 110,
+          "url": "https://i.ytimg.com/vi/_kYSj_6KUHM/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLACm2DSDDJ692jLFVWfF-_s5yFgOQ",
+          "width": 196
+        },
+        {
+          "height": 138,
+          "url": "https://i.ytimg.com/vi/_kYSj_6KUHM/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD_akufv0CEegoGbXHjcAOywT1qzg",
+          "width": 246
+        },
+        {
+          "height": 188,
+          "url": "https://i.ytimg.com/vi/_kYSj_6KUHM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBgeRYaSr3vy5vS8ly6snw_qHQ66g",
+          "width": 336
+        }
+      ],
+      "title": "I Dare You"
+    },
+    {
+      "duration": 211,
+      "id": "uTodLRy-4xs",
+      "thumbnails": [
+        {
+          "height": 94,
+          "url": "https://i.ytimg.com/vi/uTodLRy-4xs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBuaBoAntd8pBjfXvNTDyGb9Y53jg",
+          "width": 168
+        },
+        {
+          "height": 110,
+          "url": "https://i.ytimg.com/vi/uTodLRy-4xs/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDvuxol6mY1qMmkplU-561BAphwTg",
+          "width": 196
+        },
+        {
+          "height": 138,
+          "url": "https://i.ytimg.com/vi/uTodLRy-4xs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDdp0tELpYPIHZhT3cSv5ZyXWOgLA",
+          "width": 246
+        },
+        {
+          "height": 188,
+          "url": "https://i.ytimg.com/vi/uTodLRy-4xs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAHOMKt1PHkqxsUf7ETAreM0JM2Og",
+          "width": 336
+        }
+      ],
+      "title": "The Darkness Has a Voice"
+    },
+    {
+      "duration": 177,
+      "id": "5q9AybWL8PE",
+      "thumbnails": [
+        {
+          "height": 94,
+          "url": "https://i.ytimg.com/vi/5q9AybWL8PE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBfXfiMjJPrnCNHCi-ysdSk2lJY3Q",
+          "width": 168
+        },
+        {
+          "height": 110,
+          "url": "https://i.ytimg.com/vi/5q9AybWL8PE/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBQv5dVHFh1GAwUf9fjO_Z950xtow",
+          "width": 196
+        },
+        {
+          "height": 138,
+          "url": "https://i.ytimg.com/vi/5q9AybWL8PE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAxYc5AfwwjeoK7nxRfIw-o-T1kiA",
+          "width": 246
+        },
+        {
+          "height": 188,
+          "url": "https://i.ytimg.com/vi/5q9AybWL8PE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqpxjKVLEd2p7c133IDRtp9lNTGA",
+          "width": 336
+        }
+      ],
+      "title": "Entertainment"
+    },
+    {
+      "duration": 238,
+      "id": "QmjwGu9kKZo",
+      "thumbnails": [
+        {
+          "height": 94,
+          "url": "https://i.ytimg.com/vi/QmjwGu9kKZo/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCJI3FqIMB2SfoRf8THjDs4nDBeSQ",
+          "width": 168
+        },
+        {
+          "height": 110,
+          "url": "https://i.ytimg.com/vi/QmjwGu9kKZo/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDrxQg__rhTWRScL0xmQxtw0piEZA",
+          "width": 196
+        },
+        {
+          "height": 138,
+          "url": "https://i.ytimg.com/vi/QmjwGu9kKZo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDGESAriTwQzufln8yw4oRistph_g",
+          "width": 246
+        },
+        {
+          "height": 188,
+          "url": "https://i.ytimg.com/vi/QmjwGu9kKZo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-q2AJ6IVPQvl9Ko3LRQbryVtXng",
+          "width": 336
+        }
+      ],
+      "title": "Worship"
+    }
+  ]
+}
+
 export const ALBUM: any = {
   "channel_name": "Amber Run",
   "id": "OLAK5uy_k-nVhxfuIQFO2ZE9EvqPKKM4__S3aOb_Y",

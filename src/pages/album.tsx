@@ -1,29 +1,28 @@
 import { Box, Button, IconButton, Link, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, Typography } from "@mui/material"
-import { ALBUM } from "../test-data"
+import { PLAYLIST } from "../test-data"
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz"
 import PlayArrowIcon from "@mui/icons-material/PlayArrow"
 import { useLocation } from "react-router-dom"
 import { useState } from "react"
 
-interface Artist {
-  name: string
-  browse_id: string
+interface Thumbnail {
+  height: number
+  width: number
+  url: string
 }
 
-interface Song {
-  // album
-  artist: Artist
+interface PlaylistVideo {
   id: string
-  name: string
-  thumbnail: string
+  title: string
+  thumbnail: Thumbnail[]
+  duration: number
 }
 
-interface Album {
+interface Playlist {
   id: string
-  name: string
-  channel_name: string
-  songs: Song[]
-  thumbnail: string
+  title: string
+  thumbnails: Thumbnail[]
+  videos: PlaylistVideo[]
 }
 
 const Spacer = () => <Box flexGrow={1} />
@@ -34,13 +33,13 @@ export const AlbumPage = () => {
   const path: string = location.pathname
   const albumId: string = path.split("/")[2]
 
-  const [album, setAlbum] = useState<Album | null>(null)
+  const [album, setAlbum] = useState<Playlist | null>(null)
 
   if (album === null) {
-    // fetch(`http://127.0.0.1:8081/dev/playlist/${albumId}`)
+    // fetch(`http://127.0.0.1:8081/playlist/${albumId}`)
     //   .then(response => response.json())
     //   .then(album => setAlbum(album))
-    setAlbum(ALBUM)
+    setAlbum(PLAYLIST)
     return null
   }
 
@@ -48,7 +47,7 @@ export const AlbumPage = () => {
     <Stack direction="column" p={5} spacing={5}>
       <Stack direction="row" spacing={5}>
         <img
-          src={album.thumbnail}
+          src={album.thumbnails[album.thumbnails.length - 1].url}
           style={{
             height: "270px",
             width: "270px",
@@ -59,11 +58,11 @@ export const AlbumPage = () => {
           <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
             <Box sx={{ width: "100%", marginTop: "auto", marginBottom: "auto" }}>
               <Typography variant="h5">
-                {album.name}
+                {album.title}
               </Typography>
-              <Link href="#" variant="h5" sx={{textDecoration: "none"}}>
+              {/* <Link href="#" variant="h5" sx={{textDecoration: "none"}}>
                 {album.channel_name}
-              </Link>
+              </Link> */}
             </Box>
           </Box>
           <Stack direction="row" spacing={2}>
@@ -83,7 +82,7 @@ export const AlbumPage = () => {
       </Stack>
 
       <List>
-        {album.songs.map((song, index) => (
+        {album.videos.map((video, index) => (
           <ListItem
             key={index}
             disablePadding
@@ -97,7 +96,7 @@ export const AlbumPage = () => {
               <ListItemIcon>
                 <Typography>{index + 1}</Typography>
               </ListItemIcon>
-              <ListItemText primary={song.name} />
+              <ListItemText primary={video.title} />
             </ListItemButton>
           </ListItem>
         ))}
