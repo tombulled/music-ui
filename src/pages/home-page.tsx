@@ -1,6 +1,6 @@
 import { Box, Chip, Stack, Typography } from "@mui/material"
-import ChannelIdForm from "../components/channel-id-form"
-import GoToAlbum from "../components/go-to-album"
+import ChannelIdForm from "../components/temp/channel-id-form"
+import GoToAlbum from "../components/temp/go-to-album"
 import { useNavigate } from "react-router-dom"
 
 export const HomePage = () => {
