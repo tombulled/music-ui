@@ -4,26 +4,27 @@ import HomePage from "./pages/home-page";
 import ChannelAlbumsPage from "./pages/channel/albums";
 import AlbumPage from "./pages/album";
 import LibraryPage from "./pages/library-page";
+import SearchPage from "./pages/search-page";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />
-  },
-  {
-    path: "/library",
     element: <LibraryPage />
   },
   {
-    path: "/channel/:channelId",
+    path: "/search",
+    element: <SearchPage />
+  },
+  {
+    path: "/artist/:id",
     element: <ArtistPage />
   },
   {
-    path: "/channel/:channelId/albums",
+    path: "/artist/:id/albums",
     element: <ChannelAlbumsPage />
   },
   {
-    path: "/album/:albumId",
+    path: "/album/:id",
     element: <AlbumPage />
   },
 ]);

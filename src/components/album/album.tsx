@@ -6,9 +6,15 @@ const TEMP_IMAGE_URL: string = "https://m.media-amazon.com/images/I/51l3v2RMiMS.
 export interface AlbumProps {
   title?: string
   subtitle?: string
+  height?: string
+  width?: string
 }
 
 export const Album = (props: AlbumProps) => {
+  // Props
+  const height: string = props.height ?? "168px";
+  const width: string = props.width ?? "168px";
+
   return (
     <Stack
       direction="column"
@@ -17,15 +23,15 @@ export const Album = (props: AlbumProps) => {
         // borderRadius: "10px",
         // width: "max-content",
         // padding: 2,
-        // height: "168px"
-        // width: "168px",
-        width: {
-          // xs: "calc(100% - 50px)"
-          xs: "100%",
-          // sm: "150px",
-          // md: "170px",
-          // xs: "100%",
-        }
+        height: height,
+        width: width,
+        // width: {
+        //   // xs: "calc(100% - 50px)"
+        //   xs: "100%",
+        //   // sm: "150px",
+        //   // md: "170px",
+        //   // xs: "100%",
+        // }
       }}
     >
       <img

@@ -1,7 +1,8 @@
-import { Stack } from "@mui/material";
+import { Stack, ToggleButton, ToggleButtonGroup, MenuItem, Select } from "@mui/material";
 import { Chip } from "@mui/material-next";
 import Grid from "@mui/material/Unstable_Grid2";
 import Album from "../components/album/album";
+import Spacer from "../components/spacer";
 
 export const LibraryPage = () => {
   return (
@@ -15,11 +16,22 @@ export const LibraryPage = () => {
       <Stack
         direction="row"
         spacing={2}
-        pl={{ xs: 1, sm: 1.5, md: 2 }}
+        px={{ xs: 1, sm: 1.5, md: 2 }}
       >
-        <Chip label="Playlists" onClick={() => { }} />
-        <Chip label="Albums" onClick={() => { }} />
-        <Chip label="Artists" onClick={() => { }} />
+        <Chip label="Songs" onClick={() => { }} disabled />
+        <Chip label="Albums" onClick={() => { }} disabled />
+        <Chip label="Artists" onClick={() => { }} disabled />
+        {/* <ToggleButtonGroup size="small" value="albums">
+          <ToggleButton value="songs">Songs</ToggleButton>
+          <ToggleButton value="albums">Albums</ToggleButton>
+          <ToggleButton value="artists">Artists</ToggleButton>
+        </ToggleButtonGroup> */}
+        <Spacer />
+        <Select value="foo" size="small" disabled>
+          <MenuItem value="foo">Recently saved</MenuItem>
+          <MenuItem value="bar">A to Z</MenuItem>
+          <MenuItem value="baz">Z to A</MenuItem>
+        </Select>
       </Stack>
 
       <Grid
@@ -32,6 +44,8 @@ export const LibraryPage = () => {
             <Album
               title="Room To Breathe"
               subtitle="Album"
+              height="100%"
+              width="100%"
             />
           </Grid>
         ))}
