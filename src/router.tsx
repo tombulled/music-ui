@@ -4,16 +4,19 @@ import HomePage from "./pages/home-page";
 import ChannelAlbumsPage from "./pages/channel/albums";
 import AlbumPage from "./pages/album";
 import LibraryPage from "./pages/library-page";
+import SearchResultsPage from "./pages/search-results-page";
 import SearchPage from "./pages/search-page";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <LibraryPage />
+    // element: <HomePage />
+    // element: <LibraryPage />
+    element: <SearchPage />
   },
   {
     path: "/search",
-    element: <SearchPage />
+    element: <SearchResultsPage />
   },
   {
     path: "/artist/:id",

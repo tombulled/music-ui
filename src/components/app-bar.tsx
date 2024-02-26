@@ -10,7 +10,7 @@ export const MusixAppBar = () => {
           Music
         </Link>
         <Spacer />
-        <MusixAppBarSearch />
+        {/* <MusixAppBarSearch /> */}
       </Toolbar>
     </AppBar>
   );
