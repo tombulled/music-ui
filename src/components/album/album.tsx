@@ -4,10 +4,11 @@ import { grey } from "@mui/material/colors";
 const TEMP_IMAGE_URL: string = "https://m.media-amazon.com/images/I/51l3v2RMiMS._SX354_SY354_BL0_QL100_.jpg";
 
 export interface AlbumProps {
-  title?: string
-  subtitle?: string
+  title?: JSX.Element | string
+  subtitle?: JSX.Element | string
   height?: string
   width?: string
+  artwork?: string
 }
 
 export const Album = (props: AlbumProps) => {
@@ -35,7 +36,7 @@ export const Album = (props: AlbumProps) => {
       }}
     >
       <img
-        src={TEMP_IMAGE_URL}
+        src={props.artwork}
         // height="168px"
         // width="168px"
         style={{
@@ -44,9 +45,12 @@ export const Album = (props: AlbumProps) => {
         }}
       />
       {props.title && (
-        <Link href="#" variant="subtitle1" sx={{ textDecoration: "none" }}>
+        // <Link href="#" variant="subtitle1" sx={{ textDecoration: "none" }}>
+        //   {props.title}
+        // </Link>
+        <Typography variant="subtitle1" color="primary">
           {props.title}
-        </Link>
+        </Typography>
       )}
       {props.subtitle && (
         <Typography variant="subtitle2">
