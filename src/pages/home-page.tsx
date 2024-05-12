@@ -1,6 +1,6 @@
-import { Box, Chip, Stack, Typography } from "@mui/material"
-import ChannelIdForm from "../components/channel-id-form"
-import GoToAlbum from "../components/go-to-album"
+import { Box, Chip, Link, Stack, Typography } from "@mui/material"
+import ChannelIdForm from "../components/temp/channel-id-form"
+import GoToAlbum from "../components/temp/go-to-album"
 import { useNavigate } from "react-router-dom"
 
 export const HomePage = () => {
@@ -8,6 +8,7 @@ export const HomePage = () => {
   
   return (
     <Stack direction="column" p={5} spacing={5}>
+      <Link href="/library">Go to Library</Link>
       <ChannelIdForm />
       <GoToAlbum />
       <Box>

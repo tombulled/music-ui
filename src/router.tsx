@@ -1,24 +1,33 @@
 import { createBrowserRouter } from "react-router-dom";
-import ChannelPage from "./pages/channel/channel";
+import ArtistPage from "./pages/channel/artist";
 import HomePage from "./pages/home-page";
 import ChannelAlbumsPage from "./pages/channel/albums";
 import AlbumPage from "./pages/album";
+import LibraryPage from "./pages/library-page";
+import SearchResultsPage from "./pages/search-results-page";
+import SearchPage from "./pages/search-page";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />
+    // element: <HomePage />
+    element: <LibraryPage />
+    // element: <SearchPage />
   },
   {
-    path: "/channel/:channelId",
-    element: <ChannelPage />
+    path: "/search",
+    element: <SearchResultsPage />
   },
   {
-    path: "/channel/:channelId/albums",
+    path: "/artist/:id",
+    element: <ArtistPage />
+  },
+  {
+    path: "/artist/:id/albums",
     element: <ChannelAlbumsPage />
   },
   {
-    path: "/album/:albumId",
+    path: "/album/:id",
     element: <AlbumPage />
   },
 ]);
