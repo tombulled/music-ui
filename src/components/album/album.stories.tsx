@@ -1,21 +1,33 @@
+import { ThemeProvider } from "@mui/material";
 import type { Meta, StoryObj } from "@storybook/react";
-import Album from "./album";
+import { ALBUM_3 } from "../../test-data";
+import { theme } from "../../theme";
+import MusixAlbum from "./album";
 
-const meta: Meta<typeof Album> = {
+const meta: Meta<typeof MusixAlbum> = {
   title: "Album",
-  component: Album,
+  component: MusixAlbum,
 };
 
 export default meta;
-type Story = StoryObj<typeof Album>;
+type Story = StoryObj<typeof MusixAlbum>;
 
 export const Primary: Story = {
   render: () => (
-    <Album
-      title="A Safe Place To Be"
-      // subtitle="Album • 2021"
-      subtitle="2021 • Album"
-      artwork="/sample/album.png"
-    />
+    <ThemeProvider theme={theme}>
+      <div style={{ width: "168px" }}>
+        <MusixAlbum album={ALBUM_3} />
+      </div>
+    </ThemeProvider>
+  ),
+};
+
+export const HideType: Story = {
+  render: () => (
+    <ThemeProvider theme={theme}>
+      <div style={{ width: "168px" }}>
+        <MusixAlbum album={ALBUM_3} hideType />
+      </div>
+    </ThemeProvider>
   ),
 };

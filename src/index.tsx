@@ -19,9 +19,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     {/* <CssVarsProvider theme={...}> */}
-    {/* <ThemeProvider theme={theme}> */}
+    <ThemeProvider theme={theme}>
       <App />
-    {/* </ThemeProvider> */}
+    </ThemeProvider>
     {/* </CssVarsProvider> */}
   </React.StrictMode>
 );

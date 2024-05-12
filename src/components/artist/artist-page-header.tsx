@@ -23,10 +23,10 @@ export const ArtistPageHeader = (props: ArtistPageHeaderProps) => {
         <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
           <Box sx={{ width: "100%", marginTop: "auto", marginBottom: "auto" }}>
             <Typography variant="h4">
-              {"Bob's Burgers"}
+              {"Aquilo"}
             </Typography>
             <Typography variant="body1" sx={{ textDecoration: "none" }}>
-              {"sponge bob time"}
+              {"Aquilo, consisting of Ben Fletcher and Tom Higham, grew up in Silverdale, a coastal Lake District village in the North of England."}
             </Typography>
           </Box>
         </Box>
