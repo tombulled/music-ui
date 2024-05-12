@@ -1,9 +1,10 @@
 import { Box, Button, IconButton, Link, Stack, Typography } from "@mui/material";
 import { useState } from "react"
 import { useLocation } from "react-router-dom"
-import { CHANNEL } from "../../test-data"
+import { ALBUM_3, CHANNEL } from "../../test-data"
 import ArtistPageHeader from "../../components/artist/artist-page-header";
 import { grey } from "@mui/material/colors";
+import MusixAlbum from "../../components/album/album";
 
 interface Thumbnail {
   height: number
@@ -58,23 +59,15 @@ export const ArtistPage = () => {
 
         <Stack direction="row" spacing={2}>
           {[1, 2, 3, 4].map(i => (
-            <Stack key={i} direction="column" p={2} sx={{ backgroundColor: grey[100], borderRadius: "10px" }}>
-              <img
-                src="https://m.media-amazon.com/images/I/51l3v2RMiMS._SX354_SY354_BL0_QL100_.jpg"
-                height="168px"
-                width="168px"
-                style={{
-                  borderRadius: "10px",
-                  marginBottom: "10px",
-                }}
+            <div key={i} style={{width: "168px"}}>
+              <MusixAlbum
+                // title="A Safe Place To Be"
+                // // subtitle="Album • 2021"
+                // artwork="/sample/album.png"
+                album={ALBUM_3}
+                hideArtist
               />
-              <Link href="#" variant="subtitle1" sx={{ textDecoration: "none" }}>
-                A Safe Place To Be
-              </Link>
-              <Typography variant="subtitle2">
-                Album • 2021
-              </Typography>
-            </Stack>
+            </div>
           ))}
         </Stack>
       </Stack>

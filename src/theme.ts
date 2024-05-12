@@ -10,4 +10,16 @@ export const theme = createTheme({
   //     main: "#d60017"
   //   },
   // },
+  components: {
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          textDecoration: "none",
+          ":hover": {
+            textDecoration: "underline",
+          },
+        },
+      },
+    },
+  },
 });

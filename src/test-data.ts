@@ -1,5 +1,26 @@
+import { AlbumType } from "./enums";
+import { Album } from "./types";
+
 export const ALBUM_THUMBNAIL: string = "https://lh3.googleusercontent.com/vIFjUF3ke2wAQxDSJ_InRwM3mYfK2YwmhqOb-rM8s37qPAJQuZ5ZFTEAJSvbCrhOXE5Dlq0RyvATB8fa0Q=w544-h544-l90-rj"
 // export const ALBUM_THUMBNAIL: string = "https://i9.ytimg.com/s_p/OLAK5uy_k-nVhxfuIQFO2ZE9EvqPKKM4__S3aOb_Y/maxresdefault.jpg?sqp=CNzeyK4Gir7X7AMICPHGuq4GEAE=&rs=AOn4CLDbTmt9CQb6PwAy_4LyBG43Ci7yBA&v=1708041073"
+
+export const ALBUM_3: Album = {
+  id: "abc123",
+  name: "A Safe Place To Be",
+  year: 2021,
+  artist: {
+    id: "def456",
+    name: "Aquilo",
+  },
+  type: AlbumType.Album,
+  artwork: [
+    {
+      width: 1200,
+      height: 1200,
+      url: "/sample/album.png",
+    },
+  ],
+};
 
 export const ALBUM_2: any = {
   id: "OLAK5uy_kRjXobVjFEz323V44CIfuKCKRngWX-Ogg",
