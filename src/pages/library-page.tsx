@@ -105,8 +105,8 @@ export const LibraryPage = () => {
                   {album.artist.name}
                 </Link>
               )}
-              height="100%"
-              width="100%"
+              // height="100%"
+              // width="100%"
               artwork={album.artwork}
             />
           </Grid>

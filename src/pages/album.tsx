@@ -1,5 +1,5 @@
 import { Box, Button, IconButton, Link, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, Typography } from "@mui/material"
-import { PLAYLIST } from "../test-data"
+import { ALBUM_2 } from "../test-data"
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz"
 import PlayArrowIcon from "@mui/icons-material/PlayArrow"
 import { useLocation } from "react-router-dom"
@@ -50,10 +50,10 @@ export const AlbumPage = () => {
   const [album, setAlbum] = useState<Album | null>(null)
 
   if (album === null) {
-    fetch(`http://127.0.0.1:8081/album/${albumId}`)
-      .then(response => response.json())
-      .then(album => setAlbum(album))
-    // setAlbum(PLAYLIST)
+    // fetch(`http://127.0.0.1:8081/album/${albumId}`)
+    //   .then(response => response.json())
+    //   .then(album => setAlbum(album))
+    setAlbum(ALBUM_2)
     return null
   }
 

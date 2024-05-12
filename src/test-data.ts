@@ -1,6 +1,81 @@
 export const ALBUM_THUMBNAIL: string = "https://lh3.googleusercontent.com/vIFjUF3ke2wAQxDSJ_InRwM3mYfK2YwmhqOb-rM8s37qPAJQuZ5ZFTEAJSvbCrhOXE5Dlq0RyvATB8fa0Q=w544-h544-l90-rj"
 // export const ALBUM_THUMBNAIL: string = "https://i9.ytimg.com/s_p/OLAK5uy_k-nVhxfuIQFO2ZE9EvqPKKM4__S3aOb_Y/maxresdefault.jpg?sqp=CNzeyK4Gir7X7AMICPHGuq4GEAE=&rs=AOn4CLDbTmt9CQb6PwAy_4LyBG43Ci7yBA&v=1708041073"
 
+export const ALBUM_2: any = {
+  id: "OLAK5uy_kRjXobVjFEz323V44CIfuKCKRngWX-Ogg",
+  name: "A Safe Place To Be",
+  type: "Album",
+  artist: {
+    name: "Aquilo",
+  },
+  year: 2021,
+  description: null,
+  artwork: [
+    {
+      "height": 1200,
+      "url": "/sample/album.png",
+      "width": 1200
+    }
+  ],
+  tracks: [
+    {
+      id: "1",
+      name: "Out in LA",
+      duration: "3:45"
+    },
+    {
+      id: "2",
+      name: "Our Bones Turn To Stone",
+      duration: "4:21"
+    },
+    {
+      id: "3",
+      name: "Talking To Yourself",
+      duration: "3:24",
+    },
+    {
+      id: "4",
+      name: "You Make Me Mad",
+      duration: "3:07",
+    },
+    {
+      id: "5",
+      name: "Stupid Not To Try",
+      duration: "2:59",
+    },
+    {
+      id: "6",
+      name: "Costume Change",
+      duration: "4:20",
+    },
+    {
+      id: "7",
+      name: "Hanging On",
+      duration: "3:36",
+    },
+    {
+      id: "8",
+      name: "Our Days Are Numbered",
+      duration: "3:16",
+    },
+    {
+      id: "9",
+      name: "Silver Spoon",
+      duration: "3:29",
+    },
+    {
+      id: "10",
+      name: "Better Off As Strangers",
+      duration: "3:46",
+    },
+    {
+      id: "11",
+      name: "I Wanna See You Smile",
+      duration: "3:20",
+    },
+  ],
+}
+
 export const PLAYLIST: any = {
   "id": "OLAK5uy_k-nVhxfuIQFO2ZE9EvqPKKM4__S3aOb_Y",
   "thumbnails": [

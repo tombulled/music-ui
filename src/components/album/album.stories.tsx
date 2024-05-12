@@ -13,7 +13,9 @@ export const Primary: Story = {
   render: () => (
     <Album
       title="A Safe Place To Be"
-      subtitle="Album • 2021"
+      // subtitle="Album • 2021"
+      subtitle="2021 • Album"
+      artwork="/sample/album.png"
     />
   ),
 };
