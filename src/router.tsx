@@ -6,7 +6,7 @@ import AlbumPage from "./pages/album";
 import LibraryPage from "./pages/library-page";
 import SearchResultsPage from "./pages/search-results-page";
 import SearchPage from "./pages/search-page";
-import SnackBarTestPage from "./pages/snackbar-test-page";
+import ToastTestPage from "./pages/toast-test-page";
 
 export const router = createBrowserRouter([
   {
@@ -32,7 +32,7 @@ export const router = createBrowserRouter([
     element: <AlbumPage />
   },
   {
-    path: "/snackbar-test",
-    element: <SnackBarTestPage />
+    path: "/toast-test",
+    element: <ToastTestPage />
   },
 ]);

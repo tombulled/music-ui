@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "../state/counter";
+
+import logger from "redux-logger";
+
+import rootReducer from "../state/root-reducer";
 
 export const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-  },
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
