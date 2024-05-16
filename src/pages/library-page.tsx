@@ -24,7 +24,8 @@ const LIBRARY_ALBUMS: Album[] = [
       {
         width: 544,
         height: 544,
-        url: "https://lh3.googleusercontent.com/0P7O4MwnfvioWlJHK0SWpUNnuTS84ocKALc_QWc3-iRPqjSo1SXLdhjffYeRbua_6jEsibsKZqj4lQBnpg=w544-h544-l90-rj",
+        url: "/sample/album.png",
+        // url: "https://lh3.googleusercontent.com/0P7O4MwnfvioWlJHK0SWpUNnuTS84ocKALc_QWc3-iRPqjSo1SXLdhjffYeRbua_6jEsibsKZqj4lQBnpg=w544-h544-l90-rj",
       },
     ],
   },
@@ -38,7 +39,8 @@ const LIBRARY_ALBUMS: Album[] = [
       {
         width: 1200,
         height: 1200,
-        url: "https://lh3.googleusercontent.com/rL9MUSE1mM6lzKRFK1XUI0FBVwkMTenF8aD-ouiGg_59CzroeVa3XckghI9KSZ6jDLkeAi_2PPAY2GI=w544-h544-l90-rj",
+        url: "/sample/album.png",
+        // url: "https://lh3.googleusercontent.com/rL9MUSE1mM6lzKRFK1XUI0FBVwkMTenF8aD-ouiGg_59CzroeVa3XckghI9KSZ6jDLkeAi_2PPAY2GI=w544-h544-l90-rj",
       },
     ],
   },
@@ -52,7 +54,8 @@ const LIBRARY_ALBUMS: Album[] = [
       {
         width: 1200,
         height: 1200,
-        url: "https://lh3.googleusercontent.com/8n5aw6RqUbj_wTmxBmR3K0UalR2dvGZiYgoBWZ_SNjLykIa0WuR92PJggqnZTfhI8isIPjJTNwuw5ZXiGw=w544-h544-l90-rj",
+        url: "/sample/album.png",
+        // url: "https://lh3.googleusercontent.com/8n5aw6RqUbj_wTmxBmR3K0UalR2dvGZiYgoBWZ_SNjLykIa0WuR92PJggqnZTfhI8isIPjJTNwuw5ZXiGw=w544-h544-l90-rj",
       },
     ],
   },
@@ -66,7 +69,8 @@ const LIBRARY_ALBUMS: Album[] = [
       {
         width: 1200,
         height: 1200,
-        url: "https://lh3.googleusercontent.com/tmSfq1JAnBrQWmgT3jMEoxf9f4rc3LQ8niHcka_CTgQ8-u2DRMULoS2FFiDIja_N-0P08m5bPKHnlxY5Zw=w544-h544-l90-rj",
+        url: "/sample/album.png",
+        // url: "https://lh3.googleusercontent.com/tmSfq1JAnBrQWmgT3jMEoxf9f4rc3LQ8niHcka_CTgQ8-u2DRMULoS2FFiDIja_N-0P08m5bPKHnlxY5Zw=w544-h544-l90-rj",
       },
     ],
   },
@@ -80,7 +84,8 @@ const LIBRARY_ALBUMS: Album[] = [
       {
         width: 1200,
         height: 1200,
-        url: "https://lh3.googleusercontent.com/qtlSk3ArpvNpLhCar9LCb_cv5wwCCqG1ZlFORXqKarbbzWQZEMFRohgWT1-pfQC5owe2ebrbFfxOzt-_=w544-h544-l90-rj",
+        url: "/sample/album.png",
+        // url: "https://lh3.googleusercontent.com/qtlSk3ArpvNpLhCar9LCb_cv5wwCCqG1ZlFORXqKarbbzWQZEMFRohgWT1-pfQC5owe2ebrbFfxOzt-_=w544-h544-l90-rj",
       },
     ],
   },
@@ -94,7 +99,8 @@ const LIBRARY_ALBUMS: Album[] = [
       {
         width: 1200,
         height: 1200,
-        url: "https://lh3.googleusercontent.com/DzUugHIKg-aFMvTjXKjhNZ-eEcDYWFdZWJNxTLjx6An8or2WQ0n1CuLR856iDBlEAX8r7Ezg5x5qKq4=w544-h544-l90-rj",
+        url: "/sample/album.png",
+        // url: "https://lh3.googleusercontent.com/DzUugHIKg-aFMvTjXKjhNZ-eEcDYWFdZWJNxTLjx6An8or2WQ0n1CuLR856iDBlEAX8r7Ezg5x5qKq4=w544-h544-l90-rj",
       },
     ],
   },
