@@ -1,0 +1,56 @@
+import SearchIcon from "@mui/icons-material/Search";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import InputBase from "@mui/material/InputBase";
+import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
+
+const SearchBox = () => {
+  return (
+    <Paper
+      sx={{
+        p: "2px 4px",
+        display: "flex",
+        alignItems: "center",
+        width: 400,
+        borderRadius: "24px",
+      }}
+    >
+      <IconButton type="button" sx={{ p: "10px" }} disabled>
+        <SearchIcon />
+      </IconButton>
+      <InputBase sx={{ ml: 1, flex: 1 }} />
+    </Paper>
+  );
+};
+
+const SearchButton = (props: { text: string }) => {
+  return (
+    <Button
+      size="medium"
+      sx={{
+        textTransform: "none",
+        color: "#3c4043",
+        backgroundColor: "#f8f9fa",
+      }}
+      disabled
+    >
+      {props.text}
+    </Button>
+  );
+};
+
+export const SearchPage3 = () => {
+  return (
+    <Stack spacing={3} sx={{ alignItems: "center", height: "100%", mt: 20 }}>
+      <img src="youtube-music-logo.png" style={{ maxHeight: "92px" }} />
+      <SearchBox />
+      <Stack spacing={2} direction="row" sx={{ justifyContent: "center" }}>
+        <SearchButton text="Google Search" />
+        <SearchButton text="I'm Feeling Lucky" />
+      </Stack>
+    </Stack>
+  );
+};
+
+export default SearchPage3;
