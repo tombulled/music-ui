@@ -62,7 +62,7 @@ export const MusixAlbum = (props: AlbumProps) => {
           }}
         />
       </a>
-      <Link href="#" variant="subtitle1">
+      <Link href={albumHref} variant="subtitle1">
         {album.name}
       </Link>
       <Stack direction="row" spacing={1}>

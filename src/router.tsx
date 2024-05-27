@@ -7,15 +7,13 @@ import LibraryPage from "./pages/library-page";
 import SearchResultsPage from "./pages/search-results-page";
 import SearchPage from "./pages/search-page";
 import ToastTestPage from "./pages/toast-test-page";
-import SearchPage3 from "./pages/search-page-3";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     // element: <HomePage />
     // element: <LibraryPage />
-    // element: <SearchPage />
-    element: <SearchPage3 />
+    element: <SearchPage />
   },
   {
     path: "/search",

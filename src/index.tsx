@@ -12,6 +12,9 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import { CssVarsProvider } from "@mui/material-next";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+
+const queryClient = new QueryClient();
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,11 +23,13 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      {/* <CssVarsProvider theme={...}> */}
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
-      {/* </CssVarsProvider> */}
+      <QueryClientProvider client={queryClient}>
+        {/* <CssVarsProvider theme={...}> */}
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
+        {/* </CssVarsProvider> */}
+      </QueryClientProvider>
     </Provider>
   </React.StrictMode>
 );
