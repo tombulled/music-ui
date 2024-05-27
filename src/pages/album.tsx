@@ -1,9 +1,22 @@
-import { Box, Button, IconButton, Link, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Stack, Typography } from "@mui/material"
-import { ALBUM_2 } from "../test-data"
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz"
-import PlayArrowIcon from "@mui/icons-material/PlayArrow"
-import { useLocation } from "react-router-dom"
-import { useState } from "react"
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import {
+  Box,
+  Button,
+  IconButton,
+  Link,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Stack,
+  Typography,
+} from "@mui/material";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+import { Fragment } from "react";
+import { useParams } from "react-router-dom";
 
 enum AlbumType {
   Album = "Album",
@@ -12,49 +25,74 @@ enum AlbumType {
 }
 
 interface Image {
-  height: number
-  width: number
-  url: string
+  height: number;
+  width: number;
+  url: string;
 }
 
 interface Artist {
-  id: string | null
-  name: string
+  id: string | null;
+  name: string;
 }
 
 interface AlbumTrack {
-  id: string
-  name: string
-  duration: string
+  id: string;
+  name: string;
+  duration: string;
 }
 
 interface Album {
-  id: string
-  name: string
-  type: AlbumType
-  artist: Artist
-  year: number
-  description: string | null
-  artwork: Image[]
-  tracks: AlbumTrack[]
+  id: string;
+  name: string;
+  type: AlbumType;
+  artists: Artist[];
+  year: number;
+  description: string | null;
+  artwork: Image[];
+  tracks: AlbumTrack[];
 }
 
-const Spacer = () => <Box flexGrow={1} />
+const Spacer = () => <Box flexGrow={1} />;
+
+const get_album = async (
+  albumId: string | undefined,
+  abortSignal?: AbortSignal
+): Promise<Album | undefined> => {
+  if (albumId === undefined) return undefined;
+
+  const response = await axios.get(
+    `https://music-api.tom.lan/album/${albumId}`,
+    {
+      signal: abortSignal,
+    }
+  );
+
+  return response.data;
+};
 
 export const AlbumPage = () => {
-  const location = useLocation()
+  const { id: albumId } = useParams();
 
-  const path: string = location.pathname
-  const albumId: string = path.split("/")[2]
+  const {
+    isPending,
+    isError,
+    data: album,
+    error,
+  } = useQuery({
+    queryKey: ["album", albumId],
+    queryFn: ({ signal }) => get_album(albumId, signal),
+  });
 
-  const [album, setAlbum] = useState<Album | null>(null)
+  if (isPending) {
+    return <span>Loading...</span>;
+  }
 
-  if (album === null) {
-    // fetch(`http://127.0.0.1:8081/album/${albumId}`)
-    //   .then(response => response.json())
-    //   .then(album => setAlbum(album))
-    setAlbum(ALBUM_2)
-    return null
+  if (isError) {
+    return <span>Error: {error.message}</span>;
+  }
+
+  if (album === undefined) {
+    return <span>Bug: album is undefined</span>;
   }
 
   return (
@@ -70,16 +108,23 @@ export const AlbumPage = () => {
         />
         <Stack direction="column" sx={{ flexGrow: 1 }}>
           <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
-            <Box sx={{ width: "100%", marginTop: "auto", marginBottom: "auto" }}>
-              <Typography variant="h4">
-                {album.name}
-              </Typography>
-              <Link href={`/artist/${album.artist.id}`} variant="h5" sx={{textDecoration: "none"}}>
-                {album.artist.name}
-              </Link>
-              <Typography variant="body1">
-                {album.description}
-              </Typography>
+            <Box
+              sx={{ width: "100%", marginTop: "auto", marginBottom: "auto" }}
+            >
+              <Typography variant="h4">{album.name}</Typography>
+              {album.artists.map((artist, index) => (
+                <Fragment key={index}>
+                  {index > 0 && <span style={{ marginRight: "5px" }}>,</span>}
+                  <Link
+                    href={`/artist/${artist.id}`}
+                    variant="h5"
+                    sx={{ textDecoration: "none" }}
+                  >
+                    {artist.name}
+                  </Link>
+                </Fragment>
+              ))}
+              <Typography variant="body1">{album.description}</Typography>
             </Box>
           </Box>
           <Stack direction="row" spacing={2}>
@@ -87,6 +132,9 @@ export const AlbumPage = () => {
               variant="contained"
               size="small"
               startIcon={<PlayArrowIcon />}
+              onClick={() =>
+                (window.location.href = `https://music.youtube.com/browse/${album.id}`)
+              }
             >
               Play
             </Button>
@@ -120,7 +168,7 @@ export const AlbumPage = () => {
         ))}
       </List>
     </Stack>
-  )
-}
+  );
+};
 
-export default AlbumPage
+export default AlbumPage;

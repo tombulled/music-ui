@@ -27,7 +27,7 @@ export type Album = {
   id: string;
   name: string;
   year: number;
-  artist: ShortArtist;
+  artists: ShortArtist[];
   type: AlbumType;
   artwork: Image[];
 };

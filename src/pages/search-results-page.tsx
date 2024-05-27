@@ -12,7 +12,7 @@ const search = async (
   if (query === null) return [];
 
   const response = await axios.get(
-    `http://localhost:8080/search/albums?q=${query}`,
+    `https://music-api.tom.lan/search/albums?q=${query}`,
     {
       signal: abortSignal,
     }
@@ -53,7 +53,7 @@ export const SearchResultsPage = () => {
     >
       {albums.map((album) => (
         <Grid key={album.id} xs={6} sm={4} md={3} lg={2} overflow="hidden">
-          <MusixAlbum album={album} hideType />
+          <MusixAlbum album={album} hideType={false} />
         </Grid>
       ))}
     </Grid>

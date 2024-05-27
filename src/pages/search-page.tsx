@@ -1,4 +1,5 @@
 import SearchIcon from "@mui/icons-material/Search";
+import { Box } from "@mui/material";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
@@ -19,13 +20,15 @@ const SearchBox = (props: { onSubmit?: (query: string) => void }) => {
         p: "2px 4px",
         display: "flex",
         alignItems: "center",
-        width: 400,
+        width: 500,
         borderRadius: "24px",
       }}
     >
-      <IconButton type="button" sx={{ p: "10px" }} disabled>
+      <Box
+        sx={{ display: "inline-flex", p: "10px", color: "rgba(0, 0, 0, 0.26)" }}
+      >
         <SearchIcon />
-      </IconButton>
+      </Box>
       <InputBase
         sx={{ ml: 1, flex: 1 }}
         value={query}

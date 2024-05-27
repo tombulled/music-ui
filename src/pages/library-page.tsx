@@ -17,7 +17,7 @@ const LIBRARY_ALBUMS: Album[] = [
   {
     id: "MPREb_vKw4Fd9gh9I",
     name: "A Safe Place To Be",
-    artist: ARTIST_AQUILO,
+    artists: [ARTIST_AQUILO],
     year: 2021,
     type: AlbumType.Album,
     artwork: [
@@ -32,7 +32,7 @@ const LIBRARY_ALBUMS: Album[] = [
   {
     id: "MPREb_OwIRC1XI65e",
     name: "ii (Reworks)",
-    artist: ARTIST_AQUILO,
+    artists: [ARTIST_AQUILO],
     year: 2018,
     type: AlbumType.Album,
     artwork: [
@@ -47,7 +47,7 @@ const LIBRARY_ALBUMS: Album[] = [
   {
     id: "MPREb_XEoOYtkwx3X",
     name: "ii",
-    artist: ARTIST_AQUILO,
+    artists: [ARTIST_AQUILO],
     year: 2017,
     type: AlbumType.Album,
     artwork: [
@@ -62,7 +62,7 @@ const LIBRARY_ALBUMS: Album[] = [
   {
     id: "MPREb_eHA1ouWw7fU",
     name: "Silhouettes",
-    artist: ARTIST_AQUILO,
+    artists: [ARTIST_AQUILO],
     year: 2017,
     type: AlbumType.Album,
     artwork: [
@@ -77,7 +77,7 @@ const LIBRARY_ALBUMS: Album[] = [
   {
     id: "MPREb_jidnV9IQWEC",
     name: "Midnight (Live EP)",
-    artist: ARTIST_AQUILO,
+    artists: [ARTIST_AQUILO],
     year: 2016,
     type: AlbumType.Album,
     artwork: [
@@ -92,7 +92,7 @@ const LIBRARY_ALBUMS: Album[] = [
   {
     id: "MPREb_XFFIeGiBHtn",
     name: "Calling Me",
-    artist: ARTIST_AQUILO,
+    artists: [ARTIST_AQUILO],
     year: 2015,
     type: AlbumType.Album,
     artwork: [

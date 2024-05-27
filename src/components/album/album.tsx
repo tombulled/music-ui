@@ -1,6 +1,7 @@
 import { Link, Stack, Typography } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { Album } from "../../types";
+import { Fragment } from "react";
 
 export interface AlbumProps {
   album: Album;
@@ -25,7 +26,7 @@ export const MusixAlbum = (props: AlbumProps) => {
 
   // Derived from Props
   const albumHref: string = `/album/${album.id}`;
-  const artistHref: string = `/artist/${album.artist.id}`;
+  // const artistHref: string = `/artist/${album.artist.id}`;
   // const width: string = props.width ?? "168px";
   // const height: string = props.height ?? "max-content";
 
@@ -54,7 +55,7 @@ export const MusixAlbum = (props: AlbumProps) => {
     >
       <a href={albumHref}>
         <img
-          src={album.artwork[0].url}
+          src={album.artwork[album.artwork.length - 1].url}
           style={{
             width: "100%",
             borderRadius: "10px",
@@ -76,13 +77,18 @@ export const MusixAlbum = (props: AlbumProps) => {
         {!hideArtist && (
           <>
             <Typography>{"•"}</Typography>
-            <Link
-              variant="subtitle2"
-              href={artistHref}
-              sx={{ color: "inherit" }}
-            >
-              {album.artist.name}
-            </Link>
+            {album.artists.map((artist, index) => (
+              <Fragment key={index}>
+                {index !== 0 && <Typography>{","}</Typography>}
+                <Link
+                  variant="subtitle2"
+                  href={`/artist/${artist.id}`}
+                  sx={{ color: "inherit" }}
+                >
+                  {artist.name}
+                </Link>
+              </Fragment>
+            ))}
           </>
         )}
       </Stack>
