@@ -1,17 +1,16 @@
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { RouterProvider } from "react-router-dom";
-import { router } from "./router";
 import MusixAppBar from "./components/app-bar";
-import { grey } from "@mui/material/colors";
+import { router } from "./router";
 
 export const App = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Stack direction="column" sx={{ height: "100%", width: "100%" }}>
       <MusixAppBar />
-      <Box>
+      <Box sx={{ flexGrow: 1 }}>
         <RouterProvider router={router} />
       </Box>
-    </Box>
+    </Stack>
   );
 };
 
