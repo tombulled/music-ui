@@ -1,3 +1,7 @@
+@import "@ukic/fonts/dist/fonts.css";
+@import "@ukic/react/dist/core/core.css";
+@import "@ukic/react/dist/core/normalize.css";
+
 body {
     margin: 0;
     padding: 0;
