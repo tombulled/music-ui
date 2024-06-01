@@ -1,7 +1,8 @@
 import { Link, Stack, Typography } from "@mui/material";
 import { grey } from "@mui/material/colors";
-import { Album } from "../../types";
 import { Fragment } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import { Album } from "../../types";
 
 export interface AlbumProps {
   album: Album;
@@ -53,7 +54,10 @@ export const MusixAlbum = (props: AlbumProps) => {
         },
       }}
     >
-      <a href={albumHref}>
+      <Link
+        component={RouterLink}
+        to={albumHref}
+      >
         <img
           src={album.artwork[album.artwork.length - 1].url}
           style={{
@@ -62,8 +66,12 @@ export const MusixAlbum = (props: AlbumProps) => {
             marginBottom: "10px",
           }}
         />
-      </a>
-      <Link href={albumHref} variant="subtitle1">
+      </Link>
+      <Link
+        variant="subtitle1"
+        component={RouterLink}
+        to={albumHref}
+      >
         {album.name}
       </Link>
       <Stack direction="row" spacing={1}>
