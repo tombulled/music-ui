@@ -7,32 +7,62 @@ import LibraryPage from "./pages/library-page";
 import SearchResultsPage from "./pages/search-results-page";
 import SearchPage from "./pages/search-page";
 import ToastTestPage from "./pages/toast-test-page";
+import Root from "./root";
+import ErrorPage from "./pages/error-page";
+
+const Index = () => <p>Index!</p>
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    // element: <HomePage />
-    // element: <LibraryPage />
-    element: <SearchPage />
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <SearchPage />,
+      },
+      {
+        path: "library",
+        element: <LibraryPage />,
+      },
+      {
+        path: "search",
+        element: <SearchResultsPage />,
+      },
+      {
+        path: "album/:id",
+        element: <AlbumPage />
+      },
+    ],
   },
-  {
-    path: "/search",
-    element: <SearchResultsPage />
-  },
-  {
-    path: "/artist/:id",
-    element: <ArtistPage />
-  },
-  {
-    path: "/artist/:id/albums",
-    element: <ChannelAlbumsPage />
-  },
-  {
-    path: "/album/:id",
-    element: <AlbumPage />
-  },
-  {
-    path: "/toast-test",
-    element: <ToastTestPage />
-  },
+  // {
+  //   path: "/",
+  //   // element: <HomePage />
+  //   element: <SearchPage />
+  // },
+  // {
+  //   path: "/search",
+  //   element: <SearchResultsPage />
+  // },
+  // {
+  //   path: "/library",
+  //   element: <LibraryPage />
+  // },
+  // {
+  //   path: "/artist/:id",
+  //   element: <ArtistPage />
+  // },
+  // {
+  //   path: "/artist/:id/albums",
+  //   element: <ChannelAlbumsPage />
+  // },
+  // {
+  //   path: "/album/:id",
+  //   element: <AlbumPage />
+  // },
+  // {
+  //   path: "/toast-test",
+  //   element: <ToastTestPage />
+  // },
 ]);

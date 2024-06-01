@@ -1,8 +1,11 @@
+import LaunchIcon from "@mui/icons-material/Launch";
+import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import {
   Box,
   Button,
+  CircularProgress,
   IconButton,
   Link,
   List,
@@ -17,6 +20,8 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Fragment } from "react";
 import { useParams } from "react-router-dom";
+import { useAppDispatch } from "../app/hooks";
+import { addAlbum } from "../state/library";
 
 enum AlbumType {
   Album = "Album",
@@ -71,6 +76,8 @@ const get_album = async (
 };
 
 export const AlbumPage = () => {
+  const dispatch = useAppDispatch();
+
   const { id: albumId } = useParams();
 
   const {
@@ -84,7 +91,7 @@ export const AlbumPage = () => {
   });
 
   if (isPending) {
-    return <span>Loading...</span>;
+    return <CircularProgress sx={{ m: "auto" }} />;
   }
 
   if (isError) {
@@ -132,11 +139,32 @@ export const AlbumPage = () => {
               variant="contained"
               size="small"
               startIcon={<PlayArrowIcon />}
-              onClick={() =>
-                (window.location.href = `https://music.youtube.com/browse/${album.id}`)
-              }
+              disabled
             >
               Play
+            </Button>
+            <Button
+              variant="contained"
+              size="small"
+              startIcon={<LibraryAddIcon />}
+              onClick={() => dispatch(addAlbum(album))}
+            >
+              Save to Library
+            </Button>
+            <Button
+              variant="contained"
+              size="small"
+              startIcon={<LaunchIcon />}
+              onClick={() =>
+                window
+                  .open(
+                    `https://music.youtube.com/browse/${album.id}`,
+                    "_blank"
+                  )
+                  ?.focus()
+              }
+            >
+              Go to Album
             </Button>
             <Spacer />
             <IconButton size="small" color="primary">

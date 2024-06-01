@@ -4,6 +4,7 @@ import axios from "axios";
 import { useSearchParams } from "react-router-dom";
 import { Album } from "../types";
 import MusixAlbum from "../components/album/album";
+import { Box, CircularProgress } from "@mui/material";
 
 const search = async (
   query: string | null,
@@ -37,7 +38,9 @@ export const SearchResultsPage = () => {
   });
 
   if (isPending) {
-    return <span>Loading...</span>;
+    return (
+      <CircularProgress sx={{ m: "auto" }} />
+    );
   }
 
   if (isError) {
