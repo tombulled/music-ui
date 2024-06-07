@@ -22,12 +22,12 @@ export const Primary: Story = {
   ),
 };
 
-export const HideType: Story = {
-  render: () => (
-    <ThemeProvider theme={theme}>
-      <div style={{ width: "168px" }}>
-        <MusixAlbum album={ALBUM_3} hideType />
-      </div>
-    </ThemeProvider>
-  ),
-};
+// export const HideType: Story = {
+//   render: () => (
+//     <ThemeProvider theme={theme}>
+//       <div style={{ width: "168px" }}>
+//         <MusixAlbum album={ALBUM_3} hideType />
+//       </div>
+//     </ThemeProvider>
+//   ),
+// };
