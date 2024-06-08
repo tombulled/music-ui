@@ -1,14 +1,12 @@
 import Grid from "@mui/material/Unstable_Grid2";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useSearchParams } from "react-router-dom";
-import { Album } from "../types";
-import MusixAlbum from "../components/album/album";
-import { Box, CircularProgress } from "@mui/material";
-import MusixAlbumSkeleton from "../components/album/album-skeleton";
 import _ from "lodash";
-import AlbumCard from "../components/album/album-card";
-import { ALBUM_3 } from "../test-data";
+import { PropsWithChildren } from "react";
+import { useSearchParams } from "react-router-dom";
+import MusixAlbum from "../components/album/album";
+import AlbumCardSkeleton from "../components/album/album-skeleton";
+import { Album } from "../types";
 
 const search = async (
   query: string | null,
@@ -41,55 +39,36 @@ export const SearchResultsPage = () => {
     queryFn: ({ signal }) => search(query, signal),
   });
 
-  // if (isPending) {
-  // return (
-  //   <CircularProgress sx={{ m: "auto" }} />
-  // );
+  if (isError) {
+    return <span>Error: {error.message}</span>;
+  }
+
+  const GridItem = ({ children }: PropsWithChildren) => (
+    <Grid xs={6} sm={4} md={3} lg={2} overflow="hidden">
+      {children}
+    </Grid>
+  );
+
   return (
     <Grid
       container
       sx={{
         p: { xs: 2, sm: 3, md: 4 },
       }}
-      spacing={2}
     >
-      {_.times(1, (index) => (
-        <Grid key={index} xs={6} sm={4} md={3} lg={2} overflow="hidden">
-          <MusixAlbum album={ALBUM_3} />
-        </Grid>
-      ))}
-      {_.times(1, (index) => (
-        <Grid key={index} xs={6} sm={4} md={3} lg={2} overflow="hidden">
-          <AlbumCard />
-        </Grid>
-      ))}
-      {_.times(1, (index) => (
-        <Grid key={index} xs={6} sm={4} md={3} lg={2} overflow="hidden">
-          <MusixAlbumSkeleton />
-        </Grid>
-      ))}
+      {isPending
+        ? _.times(10, (index) => (
+            <GridItem key={index}>
+              <AlbumCardSkeleton />
+            </GridItem>
+          ))
+        : albums.map((album) => (
+            <GridItem>
+              <MusixAlbum album={album} hideType={false} />
+            </GridItem>
+          ))}
     </Grid>
   );
-  // }
-
-  // if (isError) {
-  //   return <span>Error: {error.message}</span>;
-  // }
-
-  // return (
-  //   <Grid
-  //     container
-  //     sx={{
-  //       p: { xs: 2, sm: 3, md: 4 },
-  //     }}
-  //   >
-  //     {albums.map((album) => (
-  //       <Grid key={album.id} xs={6} sm={4} md={3} lg={2} overflow="hidden">
-  //         <MusixAlbum album={album} hideType={false} />
-  //       </Grid>
-  //     ))}
-  //   </Grid>
-  // );
 };
 
 export default SearchResultsPage;

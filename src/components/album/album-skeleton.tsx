@@ -1,9 +1,24 @@
-import { Skeleton, Stack } from "@mui/material";
+import { Card, CardContent, Skeleton } from "@mui/material";
 
-export const MusixAlbumSkeleton = () => (
-  <Stack direction="column" padding={1}>
-    <Skeleton variant="rounded" width="100%" height={215} />
-  </Stack>
-);
+export const AlbumCardSkeleton = () => {
+  return (
+    <Card
+      elevation={0}
+      sx={{
+        borderRadius: "10px",
+        padding: 1,
+      }}
+    >
+      <Skeleton
+        sx={{ height: 215, borderRadius: "10px" }}
+        variant="rectangular"
+      />
+      <CardContent sx={{ px: 0, py: 1, "&:last-child": { pb: 0 } }}>
+        <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
+        <Skeleton variant="text" sx={{ fontSize: "0.875rem" }} />
+      </CardContent>
+    </Card>
+  );
+};
 
-export default MusixAlbumSkeleton;
+export default AlbumCardSkeleton;
