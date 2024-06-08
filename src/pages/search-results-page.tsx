@@ -5,8 +5,10 @@ import _ from "lodash";
 import { PropsWithChildren } from "react";
 import { useSearchParams } from "react-router-dom";
 import MusixAlbum from "../components/album/album";
-import AlbumCardSkeleton from "../components/album/album-skeleton";
+import AlbumCardSkeleton from "../components/album/album-card-skeleton";
 import { Album } from "../types";
+import AlbumCard from "../components/album/album-card";
+import { ALBUM_3 } from "../test-data";
 
 const search = async (
   query: string | null,
@@ -56,6 +58,9 @@ export const SearchResultsPage = () => {
         p: { xs: 2, sm: 3, md: 4 },
       }}
     >
+      <GridItem>
+        <AlbumCard album={ALBUM_3} />
+      </GridItem>
       {isPending
         ? _.times(10, (index) => (
             <GridItem key={index}>

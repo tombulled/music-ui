@@ -10,7 +10,7 @@ export const AlbumCardSkeleton = () => {
       }}
     >
       <Skeleton
-        sx={{ height: 215, borderRadius: "10px" }}
+        sx={{ height: "100%", aspectRatio: "1 / 1", borderRadius: "10px" }}
         variant="rectangular"
       />
       <CardContent sx={{ px: 0, py: 1, "&:last-child": { pb: 0 } }}>
