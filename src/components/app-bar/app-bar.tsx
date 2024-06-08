@@ -1,5 +1,5 @@
 import { AppBar, IconButton, Toolbar, Link } from "@mui/material";
-import Spacer from "./spacer";
+import Spacer from "../utils/spacer";
 import MusixAppBarSearch from "./app-bar-search";
 import LibraryMusicIcon from "@mui/icons-material/LibraryMusic";
 import { Link as RouterLink, useNavigate } from "react-router-dom";

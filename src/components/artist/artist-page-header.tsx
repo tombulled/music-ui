@@ -1,7 +1,7 @@
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
-import Spacer from "../spacer";
+import Spacer from "../utils/spacer";
 
 export interface ArtistPageHeaderProps {
   image: string;

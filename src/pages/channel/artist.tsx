@@ -5,6 +5,7 @@ import { ALBUM_3, CHANNEL } from "../../test-data"
 import ArtistPageHeader from "../../components/artist/artist-page-header";
 import { grey } from "@mui/material/colors";
 import AlbumCard from "../../components/album/album-card/album-card";
+import Spacer from "../../components/utils/spacer";
 
 interface Thumbnail {
   height: number
@@ -18,8 +19,6 @@ interface Artist {
   description: string
   thumbnails: Thumbnail[]
 }
-
-const Spacer = () => <Box flexGrow={1} />
 
 export const ArtistPage = () => {
   const location = useLocation()

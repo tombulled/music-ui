@@ -22,6 +22,7 @@ import { Fragment } from "react";
 import { useParams } from "react-router-dom";
 import { useAppDispatch } from "../state/hooks";
 import { addAlbum } from "../state/slices/library";
+import Spacer from "../components/utils/spacer";
 
 enum AlbumType {
   Album = "Album",
@@ -56,8 +57,6 @@ interface Album {
   artwork: Image[];
   tracks: AlbumTrack[];
 }
-
-const Spacer = () => <Box flexGrow={1} />;
 
 const get_album = async (
   albumId: string | undefined,

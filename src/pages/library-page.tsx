@@ -1,7 +1,7 @@
 import { Stack, ToggleButton, ToggleButtonGroup, MenuItem, Select, Box, Link, Typography } from "@mui/material";
 import { Chip } from "@mui/material-next";
 import Grid from "@mui/material/Unstable_Grid2";
-import Spacer from "../components/spacer";
+import Spacer from "../components/utils/spacer";
 import { Album, ShortArtist } from "../types";
 import { AlbumType } from "../enums";
 import { useAppSelector } from "../state/hooks";

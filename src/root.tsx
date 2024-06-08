@@ -1,7 +1,8 @@
 import { Box, Stack } from "@mui/material";
 import { Outlet, RouterProvider } from "react-router-dom";
-import MusixAppBar from "./components/app-bar";
+import MusixAppBar from "./components/app-bar/app-bar";
 import { router } from "./router";
+import SnackBar from "./components/snackbar/snackbar";
 
 export const Root = () => {
   return (
@@ -12,6 +13,7 @@ export const Root = () => {
         {/* <p>Hello, World!</p> */}
         <Outlet />
       </Box>
+      <SnackBar />
     </Stack>
   );
 };

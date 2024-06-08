@@ -1,7 +1,7 @@
 import { IcToast, IcToastRegion } from "@ukic/react";
 import { useEffect, useRef, useState } from "react";
-import { useAppDispatch, useAppSelector } from "../state/hooks";
-import { popToast, selectToastMessages } from "../state/slices/toast";
+import { useAppDispatch, useAppSelector } from "../../state/hooks";
+import { popToast, selectToastMessages } from "../../state/slices/toast";
 
 const usePrevious = <T,>(value: T): T | undefined => {
   const ref = useRef<T>();
