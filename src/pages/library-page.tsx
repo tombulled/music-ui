@@ -7,6 +7,7 @@ import { Album, ShortArtist } from "../types";
 import { AlbumType } from "../enums";
 import { useAppSelector } from "../app/hooks";
 import { selectLibraryAlbums } from "../state/library";
+import AlbumCard from "../components/album/album-card";
 
 // // Artists
 // const ARTIST_AQUILO: ShortArtist = {
@@ -150,7 +151,8 @@ export const LibraryPage = () => {
                 backgroundColor: "pink"
               }}
             /> */}
-            <MusixAlbum
+            <AlbumCard album={album} />
+            {/*<MusixAlbum
               album={album}
               hideType
               // id={album.id}
@@ -167,7 +169,7 @@ export const LibraryPage = () => {
               // artwork={album.artwork}
               // height="100%"
               // width="100%"
-            />
+          // />*/}
           </Grid>
         ))}
       </Grid>
