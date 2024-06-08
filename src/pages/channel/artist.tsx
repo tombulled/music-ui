@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom"
 import { ALBUM_3, CHANNEL } from "../../test-data"
 import ArtistPageHeader from "../../components/artist/artist-page-header";
 import { grey } from "@mui/material/colors";
-import MusixAlbum from "../../components/album/album";
+import AlbumCard from "../../components/album/album-card/album-card";
 
 interface Thumbnail {
   height: number
@@ -60,12 +60,12 @@ export const ArtistPage = () => {
         <Stack direction="row" spacing={2}>
           {[1, 2, 3, 4].map(i => (
             <div key={i} style={{width: "168px"}}>
-              <MusixAlbum
+              <AlbumCard
                 // title="A Safe Place To Be"
                 // // subtitle="Album • 2021"
                 // artwork="/sample/album.png"
                 album={ALBUM_3}
-                hideArtist
+                hideArtists
               />
             </div>
           ))}

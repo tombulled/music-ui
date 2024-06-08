@@ -71,7 +71,7 @@ export const SearchPage = () => {
       <img src="youtube-music-logo.png" style={{ maxHeight: "92px" }} />
       <SearchBox onSubmit={onSubmit} />
       <Stack spacing={2} direction="row" sx={{ justifyContent: "center" }}>
-        <SearchButton text="Google Search" />
+        <SearchButton text="Music Search" />
         <SearchButton text="I'm Feeling Lucky" />
       </Stack>
     </Stack>

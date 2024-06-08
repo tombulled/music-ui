@@ -4,7 +4,6 @@ import axios from "axios";
 import _ from "lodash";
 import { PropsWithChildren } from "react";
 import { useSearchParams } from "react-router-dom";
-import MusixAlbum from "../components/album/album";
 import AlbumCardSkeleton from "../components/album/album-card-skeleton/album-card-skeleton";
 import { Album } from "../types";
 import AlbumCard from "../components/album/album-card/album-card";
@@ -58,9 +57,6 @@ export const SearchResultsPage = () => {
         p: { xs: 2, sm: 3, md: 4 },
       }}
     >
-      <GridItem>
-        <AlbumCard album={ALBUM_3} />
-      </GridItem>
       {isPending
         ? _.times(10, (index) => (
             <GridItem key={index}>
@@ -69,7 +65,7 @@ export const SearchResultsPage = () => {
           ))
         : albums.map((album) => (
             <GridItem>
-              <MusixAlbum album={album} hideType={false} />
+              <AlbumCard album={album} />
             </GridItem>
           ))}
     </Grid>
