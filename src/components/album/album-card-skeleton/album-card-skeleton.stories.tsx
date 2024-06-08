@@ -1,22 +1,21 @@
 import { ThemeProvider } from "@mui/material";
 import type { Meta, StoryObj } from "@storybook/react";
-import { ALBUM_3 } from "../../test-data";
-import { theme } from "../../theme";
-import AlbumCard from "./album-card";
+import { theme } from "../../../theme";
+import AlbumCardSkeleton from "./album-card-skeleton";
 
-const meta: Meta<typeof AlbumCard> = {
-  title: "Album Card",
-  component: AlbumCard,
+const meta: Meta<typeof AlbumCardSkeleton> = {
+  title: "Album Card Skeleton",
+  component: AlbumCardSkeleton,
 };
 
 export default meta;
-type Story = StoryObj<typeof AlbumCard>;
+type Story = StoryObj<typeof AlbumCardSkeleton>;
 
 export const Primary: Story = {
   render: () => (
     <ThemeProvider theme={theme}>
       <div style={{ width: "215px" }}>
-        <AlbumCard album={ALBUM_3} />
+        <AlbumCardSkeleton />
       </div>
     </ThemeProvider>
   ),

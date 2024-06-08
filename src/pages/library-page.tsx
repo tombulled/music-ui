@@ -7,7 +7,7 @@ import { Album, ShortArtist } from "../types";
 import { AlbumType } from "../enums";
 import { useAppSelector } from "../app/hooks";
 import { selectLibraryAlbums } from "../state/library";
-import AlbumCard from "../components/album/album-card";
+import AlbumCard from "../components/album/album-card/album-card";
 
 // // Artists
 // const ARTIST_AQUILO: ShortArtist = {

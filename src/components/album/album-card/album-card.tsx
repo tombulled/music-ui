@@ -7,8 +7,9 @@ import {
   Typography,
 } from "@mui/material";
 import { grey } from "@mui/material/colors";
+import { Fragment } from "react";
 import { Link as RouterLink } from "react-router-dom";
-import { Album } from "../../types";
+import { Album } from "../../../types";
 
 const bull = (
   <Box
@@ -21,11 +22,15 @@ const bull = (
 
 export interface AlbumCardProps {
   album: Album;
+  hideType?: boolean;
+  hideArtists?: boolean;
 }
 
 export const AlbumCard = (props: AlbumCardProps) => {
   // Props
   const album: Album = props.album;
+  const hideType: boolean = props.hideType ?? false;
+  const hideArtists: boolean = props.hideArtists ?? false;
 
   // Derived from Props
   const albumHref: string = `/album/${album.id}`;
@@ -60,8 +65,35 @@ export const AlbumCard = (props: AlbumCardProps) => {
         >
           {album.name}
         </Link>
-        <Typography variant="subtitle2" color="text.secondary">
-          {album.year}{bull}{album.type}{bull}{album.artists[0].name}
+        <Typography
+          variant="subtitle2"
+          color="text.secondary"
+          display="inline-block"
+        >
+          {album.year}
+          {!hideType && (
+            <>
+              {bull}
+              {album.type}
+            </>
+          )}
+          {!hideArtists && (
+            <>
+              {bull}
+              {album.artists.map((artist, index) => (
+                <Fragment key={index}>
+                  {index !== 0 && ", "}
+                  <Link
+                    component={RouterLink}
+                    to={`/artist/${artist.id}`}
+                    color="inherit"
+                  >
+                    {artist.name}
+                  </Link>
+                </Fragment>
+              ))}
+            </>
+          )}
         </Typography>
       </CardContent>
     </Card>

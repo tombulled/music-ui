@@ -34,6 +34,10 @@ export const router = createBrowserRouter([
         path: "album/:id",
         element: <AlbumPage />
       },
+      {
+        path: "artist/:id",
+        element: <ArtistPage />
+      },
     ],
   },
   // {

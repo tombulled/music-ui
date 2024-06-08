@@ -5,9 +5,9 @@ import _ from "lodash";
 import { PropsWithChildren } from "react";
 import { useSearchParams } from "react-router-dom";
 import MusixAlbum from "../components/album/album";
-import AlbumCardSkeleton from "../components/album/album-card-skeleton";
+import AlbumCardSkeleton from "../components/album/album-card-skeleton/album-card-skeleton";
 import { Album } from "../types";
-import AlbumCard from "../components/album/album-card";
+import AlbumCard from "../components/album/album-card/album-card";
 import { ALBUM_3 } from "../test-data";
 
 const search = async (
