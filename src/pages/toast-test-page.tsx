@@ -1,8 +1,8 @@
 import { Stack } from "@mui/material";
 import { IcButton } from "@ukic/react";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { useAppDispatch, useAppSelector } from "../state/hooks";
 import SnackBar from "../components/snackbar";
-import { pushToast, selectToastMessages } from "../state/toast";
+import { pushToast, selectToastMessages } from "../state/slices/toast";
 
 export const ToastTestPage = () => {
   const dispatch = useAppDispatch();

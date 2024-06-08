@@ -20,8 +20,8 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Fragment } from "react";
 import { useParams } from "react-router-dom";
-import { useAppDispatch } from "../app/hooks";
-import { addAlbum } from "../state/library";
+import { useAppDispatch } from "../state/hooks";
+import { addAlbum } from "../state/slices/library";
 
 enum AlbumType {
   Album = "Album",

@@ -4,8 +4,8 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Spacer from "../components/spacer";
 import { Album, ShortArtist } from "../types";
 import { AlbumType } from "../enums";
-import { useAppSelector } from "../app/hooks";
-import { selectLibraryAlbums } from "../state/library";
+import { useAppSelector } from "../state/hooks";
+import { selectLibraryAlbums } from "../state/slices/library";
 import AlbumCard from "../components/album/album-card/album-card";
 
 // // Artists

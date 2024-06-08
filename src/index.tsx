@@ -4,7 +4,7 @@ import "./index.css";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./theme";
 // import App from "./app";
-import { store } from "./app/store";
+import { store } from "./state/store";
 import { Provider } from "react-redux";
 
 import "@fontsource/roboto/300.css";
