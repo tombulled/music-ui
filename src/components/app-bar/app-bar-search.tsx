@@ -1,8 +1,10 @@
 import { styled, alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
+import { FormEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const Search = styled("div")(({ theme }) => ({
+const Search = styled("form")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
@@ -45,14 +47,25 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export const MusixAppBarSearch = () => {
+  const navigate = useNavigate();
+
+  const [value, setValue] = useState<string>("");
+
+  const onSubmit = (event: FormEvent<HTMLFormElement>): void => {
+    event.preventDefault();
+
+    navigate(`/search?q=${value}`);
+  };
+
   return (
-    <Search>
+    <Search onSubmit={onSubmit}>
       <SearchIconWrapper>
         <SearchIcon />
       </SearchIconWrapper>
       <StyledInputBase
         placeholder="Search…"
         inputProps={{ "aria-label": "search" }}
+        onChange={(event) => setValue(event.target.value)}
       />
     </Search>
   );
