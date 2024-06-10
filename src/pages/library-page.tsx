@@ -1,5 +1,4 @@
 import { Stack, ToggleButton, ToggleButtonGroup, MenuItem, Select, Box, Link, Typography } from "@mui/material";
-import { Chip } from "@mui/material-next";
 import Grid from "@mui/material/Unstable_Grid2";
 import Spacer from "../components/utils/spacer";
 import { Album, ShortArtist } from "../types";
@@ -119,22 +118,22 @@ export const LibraryPage = () => {
       }}
       spacing={2}
     >
-      <Stack
+      {/* <Stack
         direction="row"
         spacing={2}
         px={{ xs: 1, sm: 1.5, md: 2 }}
       >
-        {/* <Typography variant="h5">Library</Typography> */}
-        {/* <Chip label="Songs" onClick={() => { }} disabled />
+        <Typography variant="h5">Library</Typography>
+        <Chip label="Songs" onClick={() => { }} disabled />
         <Chip label="Albums" onClick={() => { }} disabled />
-        <Chip label="Artists" onClick={() => { }} disabled /> */}
+        <Chip label="Artists" onClick={() => { }} disabled />
         <Spacer />
         <Select value="foo" size="small" disabled>
           <MenuItem value="foo">Recently saved</MenuItem>
           <MenuItem value="bar">A to Z</MenuItem>
           <MenuItem value="baz">Z to A</MenuItem>
         </Select>
-      </Stack>
+      </Stack> */}
 
       <Grid
         container
