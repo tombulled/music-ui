@@ -7,6 +7,7 @@ import LibraryPage from "./pages/library-page";
 import SearchPage from "./pages/search-page";
 import SearchResultsPage from "./pages/search-results-page";
 import Root from "./root";
+import ExplorePage from "./pages/explore-page";
 
 export const router = createBrowserRouter([
   {
@@ -15,28 +16,37 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        index: true,
-        element: <SearchPage />,
-      },
-      {
-        path: "library",
-        element: <LibraryPage />,
-      },
-      {
-        path: "search",
-        element: <SearchResultsPage />,
-      },
-      {
-        path: "album/:id",
-        element: <AlbumPage />,
-      },
-      {
-        path: "artist/:id",
-        element: <ArtistPage />,
-      },
-      {
-        path: "/artist/:id/albums",
-        element: <ChannelAlbumsPage />,
+        errorElement: <ErrorPage />,
+        children: [
+          {
+            index: true,
+            element: <SearchPage />,
+          },
+          {
+            path: "explore",
+            element: <ExplorePage />,
+          },
+          {
+            path: "library",
+            element: <LibraryPage />,
+          },
+          {
+            path: "search",
+            element: <SearchResultsPage />,
+          },
+          {
+            path: "album/:id",
+            element: <AlbumPage />,
+          },
+          {
+            path: "artist/:id",
+            element: <ArtistPage />,
+          },
+          {
+            path: "artist/:id/albums",
+            element: <ChannelAlbumsPage />,
+          },
+        ],
       },
     ],
   },

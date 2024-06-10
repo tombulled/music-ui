@@ -2,14 +2,13 @@ import ExploreIcon from "@mui/icons-material/Explore";
 import HomeIcon from "@mui/icons-material/Home";
 import LibraryIcon from "@mui/icons-material/LibraryMusic";
 import { AppBar, Button, Link, Stack, Toolbar } from "@mui/material";
-import { Link as RouterLink } from "react-router-dom";
+import { NavLink, Link as RouterLink } from "react-router-dom";
 import Spacer from "../utils/spacer";
 import MusixAppBarSearch from "./app-bar-search";
 
 export const MusixAppBar = () => (
   <AppBar position="static">
     <Toolbar>
-      {/* <MusicNote sx={{ display: "flex" }} /> */}
       <Link
         variant="h6"
         noWrap
@@ -26,30 +25,36 @@ export const MusixAppBar = () => (
         MUSIX
       </Link>
       <Stack direction="row" spacing={2}>
-        <Button
-          sx={{ my: 2, color: "white" }}
-          startIcon={<HomeIcon />}
-          component={RouterLink}
+        <NavLink
+          style={({ isActive }) => ({
+            color: isActive ? "red" : "inherit",
+          })}
           to="/"
         >
-          Home
-        </Button>
-        <Button
-          sx={{ my: 2, color: "white" }}
-          startIcon={<ExploreIcon />}
-          component={RouterLink}
+          <Button sx={{ color: "inherit" }} startIcon={<HomeIcon />}>
+            Home
+          </Button>
+        </NavLink>
+        <NavLink
+          style={({ isActive }) => ({
+            color: isActive ? "red" : "inherit",
+          })}
           to="/explore"
         >
-          Explore
-        </Button>
-        <Button
-          sx={{ my: 2, color: "white" }}
-          startIcon={<LibraryIcon />}
-          component={RouterLink}
-          to="library"
+          <Button sx={{ color: "inherit" }} startIcon={<ExploreIcon />}>
+            Explore
+          </Button>
+        </NavLink>
+        <NavLink
+          style={({ isActive }) => ({
+            color: isActive ? "red" : "inherit",
+          })}
+          to="/library"
         >
-          Library
-        </Button>
+          <Button sx={{ color: "inherit" }} startIcon={<LibraryIcon />}>
+            Library
+          </Button>
+        </NavLink>
       </Stack>
       <Spacer />
       <MusixAppBarSearch />

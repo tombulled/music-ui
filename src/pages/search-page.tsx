@@ -69,7 +69,8 @@ export const SearchPage = () => {
   const navigate = useNavigate();
 
   const onSubmit = (query: string): void => {
-    navigate(`/search?q=${query}`);
+    // navigate(`/search?q=${query}`);
+    navigate(`/bob`);
   };
 
   return (
