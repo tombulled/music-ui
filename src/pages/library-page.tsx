@@ -1,12 +1,11 @@
-import { Stack, ToggleButton, ToggleButtonGroup, MenuItem, Select, Box, Link } from "@mui/material";
-import { Chip } from "@mui/material-next";
+import { Stack, ToggleButton, ToggleButtonGroup, MenuItem, Select, Box, Link, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import MusixAlbum from "../components/album/album";
-import Spacer from "../components/spacer";
+import Spacer from "../components/utils/spacer";
 import { Album, ShortArtist } from "../types";
 import { AlbumType } from "../enums";
-import { useAppSelector } from "../app/hooks";
-import { selectLibraryAlbums } from "../state/library";
+import { useAppSelector } from "../state/hooks";
+import { selectLibraryAlbums } from "../state/slices/library";
+import AlbumCard from "../components/album/album-card/album-card";
 
 // // Artists
 // const ARTIST_AQUILO: ShortArtist = {
@@ -119,21 +118,22 @@ export const LibraryPage = () => {
       }}
       spacing={2}
     >
-      <Stack
+      {/* <Stack
         direction="row"
         spacing={2}
         px={{ xs: 1, sm: 1.5, md: 2 }}
       >
-        {/* <Chip label="Songs" onClick={() => { }} disabled />
+        <Typography variant="h5">Library</Typography>
+        <Chip label="Songs" onClick={() => { }} disabled />
         <Chip label="Albums" onClick={() => { }} disabled />
-        <Chip label="Artists" onClick={() => { }} disabled /> */}
+        <Chip label="Artists" onClick={() => { }} disabled />
         <Spacer />
         <Select value="foo" size="small" disabled>
           <MenuItem value="foo">Recently saved</MenuItem>
           <MenuItem value="bar">A to Z</MenuItem>
           <MenuItem value="baz">Z to A</MenuItem>
         </Select>
-      </Stack>
+      </Stack> */}
 
       <Grid
         container
@@ -143,31 +143,7 @@ export const LibraryPage = () => {
       >
         {albums.map(album => (
           <Grid key={album.id} xs={6} sm={4} md={3} lg={2} overflow="hidden">
-            {/* <div
-              style={{
-                height: "168px",
-                width: "100%",
-                backgroundColor: "pink"
-              }}
-            /> */}
-            <MusixAlbum
-              album={album}
-              hideType
-              // id={album.id}
-              // title={(
-              //   <Link href={`/album/${album.id}`} sx={{ textDecoration: "none" }}>
-              //     {album.name}
-              //   </Link>
-              // )}
-              // subtitle={(
-              //   <Link href={`/artist/${album.artist.id}`} sx={{ textDecoration: "none", color: "inherit" }}>
-              //     {album.artist.name}
-              //   </Link>
-              // )}
-              // artwork={album.artwork}
-              // height="100%"
-              // width="100%"
-            />
+            <AlbumCard album={album} />
           </Grid>
         ))}
       </Grid>

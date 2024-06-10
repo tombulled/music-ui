@@ -1,14 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import type { RootState } from "../app/store";
-import { Album } from "../types";
+import type { RootState } from "../store";
+import { Album } from "../../types";
+import { ALBUM_3 } from "../../test-data";
 
 interface LibraryState {
   albums: Album[];
 }
 
 const initialState: LibraryState = {
-  albums: [],
+  // albums: [],
+  albums: [ALBUM_3],
 };
 
 export const librarySlice = createSlice({

@@ -1,10 +1,10 @@
+import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { Box, Button, IconButton, Stack, Typography } from "@mui/material";
-import Spacer from "../spacer";
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz"
-import PlayArrowIcon from "@mui/icons-material/PlayArrow"
+import Spacer from "../utils/spacer";
 
 export interface ArtistPageHeaderProps {
-  image: string
+  image: string;
 }
 
 export const ArtistPageHeader = (props: ArtistPageHeaderProps) => {
@@ -22,11 +22,11 @@ export const ArtistPageHeader = (props: ArtistPageHeaderProps) => {
       <Stack direction="column" sx={{ flexGrow: 1 }}>
         <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center" }}>
           <Box sx={{ width: "100%", marginTop: "auto", marginBottom: "auto" }}>
-            <Typography variant="h4">
-              {"Aquilo"}
-            </Typography>
+            <Typography variant="h4">{"Aquilo"}</Typography>
             <Typography variant="body1" sx={{ textDecoration: "none" }}>
-              {"Aquilo, consisting of Ben Fletcher and Tom Higham, grew up in Silverdale, a coastal Lake District village in the North of England."}
+              {
+                "Aquilo, consisting of Ben Fletcher and Tom Higham, grew up in Silverdale, a coastal Lake District village in the North of England."
+              }
             </Typography>
           </Box>
         </Box>
@@ -46,6 +46,6 @@ export const ArtistPageHeader = (props: ArtistPageHeaderProps) => {
       </Stack>
     </Stack>
   );
-}
+};
 
 export default ArtistPageHeader;

@@ -1,12 +1,13 @@
 import SearchIcon from "@mui/icons-material/Search";
 import { Box } from "@mui/material";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
 import InputBase from "@mui/material/InputBase";
 import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../state/hooks";
+import { pushToast } from "../state/slices/toast";
 
 const SearchBox = (props: { onSubmit?: (query: string) => void }) => {
   // Props
@@ -44,6 +45,10 @@ const SearchBox = (props: { onSubmit?: (query: string) => void }) => {
 };
 
 const SearchButton = (props: { text: string }) => {
+  const dispatch = useAppDispatch();
+
+  const onClick = () => dispatch(pushToast(props.text + "!"));
+
   return (
     <Button
       size="medium"
@@ -52,7 +57,8 @@ const SearchButton = (props: { text: string }) => {
         color: "#3c4043",
         backgroundColor: "#f8f9fa",
       }}
-      disabled
+      // disabled
+      onClick={onClick}
     >
       {props.text}
     </Button>
@@ -63,7 +69,8 @@ export const SearchPage = () => {
   const navigate = useNavigate();
 
   const onSubmit = (query: string): void => {
-    navigate(`/search?q=${query}`);
+    // navigate(`/search?q=${query}`);
+    navigate(`/bob`);
   };
 
   return (
@@ -71,7 +78,7 @@ export const SearchPage = () => {
       <img src="youtube-music-logo.png" style={{ maxHeight: "92px" }} />
       <SearchBox onSubmit={onSubmit} />
       <Stack spacing={2} direction="row" sx={{ justifyContent: "center" }}>
-        <SearchButton text="Google Search" />
+        <SearchButton text="Music Search" />
         <SearchButton text="I'm Feeling Lucky" />
       </Stack>
     </Stack>
